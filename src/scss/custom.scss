@@ -1,13 +1,54 @@
 //@import './carousel.css';
-@import './Montserrat ExtraLight.css';
-@import './Montserrat ExtraBold.css';
 @import './Montserrat.css';
+$red: #df5a5a;
+* {
+  font-family: 'Montserrat';
+}
+
 html {
   font-size: 16px;
 }
 
+nav,
+.navbar-brand {
+  padding-top: 0 !important;
+}
+
+.btn {
+  &.btn-reg {
+    /* Style for "кнопка 4" */
+    width: 240px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: $red;
+    color: #ffffff;
+    padding: 4px;
+  }
+}
+
 header {
   overflow: visible;
+  .navbar-nav {
+    .btn-reg {
+      position: absolute;
+      right: 15px;
+      padding: 0;
+    }
+    .nav-item {
+      line-height: 15px;
+      .nav-link {
+        /* Style for "О проекте" */
+        line-height: 34px;
+        vertical-align: middle;
+        color: #ffffff;
+        font-family: Montserrat;
+        font-size: 15px;
+        font-weight: normal;
+        /* Text style for "О проекте" */
+        letter-spacing: 0.38px;
+      }
+    }
+  }
   .elements {
     display: block;
     position: absolute;
@@ -19,11 +60,11 @@ header {
       top: 168px;
       background-image: url('../../public/img/header-left-elements.png');
       background-repeat: no-repeat;
-      background-size: 100%;
+      background-size: 136%;
       background-position: center;
-      background-position-x: 0;
+      background-position-x: -65px;
       background-position-y: 0;
-      z-index: 1000;
+      z-index: 0;
     }
     .elements-right {
       right: 0;
@@ -41,13 +82,95 @@ header {
         padding-top: 310px;
         h1 {
           /* Style for "Фестиваль" */
-          width: 1047px;
-          height: 128px;
           color: #ffffff;
-          font-family: "Montserrat - Extra Bold";
           font-size: 65px;
-          font-weight: bold;
+          font-weight: 800;
           text-transform: uppercase;
+        }
+        h2 {
+          /* Style for "17 июля -" */
+          color: #ffffff;
+          font-size: 30px;
+          font-weight: normal;
+          text-transform: uppercase;
+        }
+        form {
+          input {
+            &.form-control {
+              /* Style for "кнопка 1" */
+              width: 240px;
+              height: 50px;
+              border-radius: 5px;
+              background-color: #ffffff;
+              margin-right: 20px !important;
+              /* Style for "Ваше имя" */
+              color: #696969;
+              font-size: 15px;
+              font-weight: 200;
+              /* Text style for "В, аше имя" */
+              letter-spacing: 0.38px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  .numbers {
+    .col {
+      padding-top: 80px;
+      h2 {
+        line-height: 100%;
+        color: $red;
+        font-size: 75px;
+        font-weight: bold;
+      }
+      p {
+        color: #000000;
+        font-size: 30px;
+        font-weight: normal;
+      }
+    }
+  }
+  .about {
+    .helper {
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    img {
+      vertical-align: middle;
+    }
+  }
+  .events {
+    padding-top: 70px;
+    h2 {
+      color: #000000;
+      font-size: 35px;
+      font-weight: bold;
+    }
+    .card {
+        border:none;
+        img{
+            border-radius:none;  
+        }
+      .card-body {
+        display: none;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        background-color: #df5a5a;
+        opacity: 0.7;
+        color: #ffffff;
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 25.02px;
+      }
+      &:hover {
+        .card-body {
+          display: block;
         }
       }
     }
