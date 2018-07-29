@@ -1,3 +1,57 @@
-@import './carousel.css';
+//@import './carousel.css';
+@import './Montserrat ExtraLight.css';
+@import './Montserrat ExtraBold.css';
+@import './Montserrat.css';
+html {
+  font-size: 16px;
+}
+
+header {
+  overflow: visible;
+  .elements {
+    display: block;
+    position: absolute;
+    top: 0;
+    &.elements-left {
+      width: 179px;
+      height: 967px;
+      left: 0;
+      top: 168px;
+      background-image: url('../../public/img/header-left-elements.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+      background-position-x: 0;
+      background-position-y: 0;
+      z-index: 1000;
+    }
+    .elements-right {
+      right: 0;
+    }
+  }
+  &.header-bg {
+    background: url('../../public/img/header-background.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .container {
+    .row {
+      .col {
+        height: 800px;
+        padding-top: 310px;
+        h1 {
+          /* Style for "Фестиваль" */
+          width: 1047px;
+          height: 128px;
+          color: #ffffff;
+          font-family: "Montserrat - Extra Bold";
+          font-size: 65px;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
 
 // Your customize CSS
