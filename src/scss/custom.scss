@@ -9,9 +9,19 @@ html {
   font-size: 16px;
 }
 
+.red-background {
+  background-color: #ff5a5a;
+}
+
 nav,
 .navbar-brand {
   padding-top: 0 !important;
+  height: 121px;
+  overflow: visible;
+}
+
+.navbar-brand {
+  padding-right: 60px;
 }
 
 .btn {
@@ -29,6 +39,8 @@ nav,
 header {
   overflow: visible;
   .navbar-nav {
+    flex-wrap: wrap;
+    text-align: left;
     .btn-reg {
       position: absolute;
       right: 15px;
@@ -36,6 +48,8 @@ header {
     }
     .nav-item {
       line-height: 15px;
+      flex: none;
+      text-align: left;
       .nav-link {
         /* Style for "О проекте" */
         line-height: 34px;
@@ -46,6 +60,13 @@ header {
         font-weight: normal;
         /* Text style for "О проекте" */
         letter-spacing: 0.38px;
+        padding: 0;
+        position: relative;
+        &::after {
+          content: '|';
+          display: inline-block;
+          padding: 0 18px;
+        }
       }
     }
   }
@@ -152,10 +173,10 @@ main {
       font-weight: bold;
     }
     .card {
-        border:none;
-        img{
-            border-radius:none;  
-        }
+      border: none;
+      img {
+        border-radius: none;
+      }
       .card-body {
         display: none;
         position: absolute;
