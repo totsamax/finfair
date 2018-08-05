@@ -12,10 +12,9 @@
 
 <body>
 
-  <header class="header-bg">
-    <div class="elements elements-left"></div>
-    <nav class="navbar navbar-expand-md fixed-top red-background">
-      <div class="container">
+  <header>
+    <nav class="navbar navbar-expand-md fixed-top red-background ">
+      <div class="container p-0">
         <a class="navbar-brand" href="#">
           <img src="/public/img/logo.png" alt="">
         </a>
@@ -53,17 +52,20 @@
         <span class="navbar-toggler-icon"></span>
       </button>
     </nav>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h1>Фестиваль финансовых и биржевых услуг</h1>
-          <h2>17 июля - 21 августа 2018</h2>
-          <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Ваше имя" aria-label="Ваше имя">
-            <input class="form-control mr-sm-2" type="text" placeholder="Телефон" aria-label="Телефон">
-            <input class="form-control mr-sm-2" type="text" placeholder="Email" aria-label="Email">
-            <button class="btn btn-reg my-2 my-sm-0" type="submit">Зарегистрироваться</button>
-          </form>
+    <div class="container-fluid header-bg">
+      <div class="elements elements-left"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>Фестиваль финансовых и биржевых услуг</h1>
+            <h2>17 июля - 21 августа 2018</h2>
+            <form class="form-inline mt-2 mt-md-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Ваше имя" aria-label="Ваше имя">
+              <input class="form-control mr-sm-2" type="text" placeholder="Телефон" aria-label="Телефон">
+              <input class="form-control mr-sm-2" type="text" placeholder="Email" aria-label="Email">
+              <button class="btn btn-reg my-2 my-sm-0" type="submit">Зарегистрироваться</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -74,114 +76,174 @@
     <div class="container ">
 
       <!-- Three columns of text below the carousel -->
-      <div class="row numbers">
-        <div class="col col-md-4">
-          <h2>8000</h2>
-          <p>человек</p>
-        </div>
-        <div class="col col-md-4">
-          <h2>16</h2>
-          <p>спикеров</p>
-        </div>
-        <div class="col col-md-4">
-          <h2>7</h2>
-          <p>тематических зон</p>
-        </div>
+      <div class="d-flex flex-wrap justify-content-center numbers">
+        <div class="col ">
+          <div>
+            <h2>8000</h2>
+            <p>человек</p>
+          </div>
 
+
+        </div>
+        <div class="col-3">
+          <div>
+            <h2>16</h2>
+            <p>спикеров</p>
+          </div>
+
+        </div>
+        <div class="col ">
+          <div>
+            <h2>7</h2>
+            <p>тематических зон</p>
+          </div>
+
+        </div>
+        <div class="col-3  ">
+          <div>
+            <h2>27</h2>
+            <p>лекций</p>
+          </div>
+
+        </div>
+        <div class="col-3 ">
+          <div>
+            <h2>3</h2>
+            <p>дня</p>
+          </div>
+
+        </div>
       </div>
-      <!-- /.row -->
-
 
       <!-- START THE about -->
 
       <div class="row about">
-        <div class="col col-md-8">
-          <h2 class="about-heading">О проекте</h2>
-          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus sequi corrupti eius adipisci cum, dolorem accusantium?
-            Qui repellendus soluta atque, a voluptas, facere excepturi nisi perferendis quidem inventore ipsum molestiae.</p>
+        <div class="col">
+          <h2>О проекте</h2>
+          <p class="lead">
+            Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические
+            вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта,
+            вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem
+            Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём.
+          </p>
         </div>
-        <div class="col col-md-4">
-          <img class="about-image img-fluid mx-auto" src="./public/img/about.png" alt="about image">
-        </div>
+
       </div>
+
+
+
+
 
       <div class="row events">
         <h2>Мероприятия</h2>
-        <div class="card-columns">
-          <div class="card">
-            <img class="card-img-top" src="./public/img/about.png" alt="Card image cap">
-            <div class="card-body">
-              <span class="helper"></span>
-              <h5 class="card-title">Название данного мероприятия </h5>
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home"
+              aria-expanded="true">Где проходит</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile"
+              aria-expanded="true">Где проходит</a>
+          </li>
+
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="card-columns">
+              <div class="card">
+                <img class="card-img-top " src="./public/img/about.png">
+                <h5 class="card-title d-flex">
+                  <a href="#" class="align-self-center">Название данного мероприятия</a>
+                </h5>
+              </div>
+              <div class="card">
+                <img class="card-img-top " src="https://picsum.photos/300/150">
+                <h5 class="card-title d-flex">
+                  <a href="#" class="align-self-center">Название данного мероприятия</a>
+                </h5>
+              </div>
+              <div class="card">
+                <img class="card-img-top " src="https://picsum.photos/100/100">
+                <h5 class="card-title d-flex">
+                  <a href="#" class="align-self-center">Название данного мероприятия</a>
+                </h5>
+              </div>
+              <div class="card">
+                <img class="card-img-top " src="https://picsum.photos/300/100">
+                <h5 class="card-title d-flex">
+                  <a href="#" class="align-self-center">Название данного мероприятия</a>
+                </h5>
+              </div>
+              <div class="card">
+                <img class="card-img-top " src="https://picsum.photos/200/300">
+                <h5 class="card-title d-flex">
+                  <a href="#" class="align-self-center">Название данного мероприятия</a>
+                </h5>
+              </div>
 
             </div>
+
+
+          </div>
+          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est possimus ad ut doloribus dicta? Excepturi ea minus,
+              totam laborum accusantium necessitatibus eveniet at autem, ratione magni culpa delectus blanditiis dolorum?
+            </p>
           </div>
 
-          <div class="card">
-            <img class="card-img-top" src="https://picsum.photos/300/80" alt="Card image cap">
-            <div class="card-body">
-              <span class="helper"></span>
-              <h5 class="card-title">Название данного мероприятия </h5>
+        </div>
 
-            </div>
-          </div>
 
-          <div class="card">
-            <img class="card-img-top" src="https://picsum.photos/300/60" alt="Card image cap">
-            <div class="card-body">
-              <span class="helper"></span>
-              <h5 class="card-title">Название данного мероприятия </h5>
-            </div>
-          </div>
 
-          <div class="card">
-            <img class="card-img-top" src="https://picsum.photos/300/190" alt="Card image cap">
-            <div class="card-body">
-              <span class="helper"></span>
-              <h5 class="card-title">Название данного мероприятия </h5>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card-img-top" src="https://picsum.photos/300/110" alt="Card image cap">
-            <div class="card-body">
-              <span class="helper"></span>
-              <h5 class="card-title">Название данного мероприятия </h5>
-            </div>
+        <div class="row partners">
+          <div class="col">
+            <h2>Партнеры</h2>
+            <h3>Генеральный партнер</h3>
           </div>
         </div>
 
-        <hr class="featurette-divider">
 
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one.
-              <span class="text-muted">Checkmate.</span>
-            </h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent
-              commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="http://via.placeholder.com/500x500" alt="Generic placeholder image">
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <!-- /END THE FEATURETTES -->
 
       </div>
       <!-- /.container -->
 
-
+      </div>
       <!-- FOOTER -->
-      <footer class="container">
-        <p class="float-right">
-          <a href="#">Back to top</a>
-        </p>
-        <p>&copy; 2017-2018 Company, Inc. &middot;
-          <a href="#">Privacy</a> &middot;
-          <a href="#">Terms</a>
-        </p>
+      <footer class="container red-background ">
+          <nav class="navbar navbar-expand-md ">
+              <div class="container p-0">
+                <a class="navbar-brand" href="#">
+                  <img src="/public/img/logo.png" alt="">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                  <ul class="navbar-nav nav-fill">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">О проекте</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Программа мероприятий</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Куда сходить до</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Карта мероприятия</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Мобильное приложение</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Регистрация</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Важная информация</a>
+                    </li>
+                  </ul>
+        
+                </div>
+              </div>
+ 
+            </nav>
       </footer>
   </main>
 </body>
