@@ -46,6 +46,14 @@ nav,
 
 header {
   overflow: visible;
+  .fullscreen-bg__video{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
   .navbar-nav {
     flex-wrap: wrap;
     text-align: left;
@@ -151,21 +159,13 @@ main {
   .numbers {
     padding-top: 143px;
     margin-bottom: 150px;
+    &>div:last-child {
+      border-right: none;
+    }
     div {
       border-right: #000000 solid 2px;
       text-align: center;
       margin-bottom: 40px;
-      &:nth-child(3) {
-        border-right: 0;
-      }
-      &:nth-child(4) {
-        border-left: #000000 solid 2px;
-      }
-      &:nth-child(5) {
-        padding-left: 0px;
-        border: none;
-        border-right: #000000 solid 2px;
-      }
       div {
         padding: 0px 40px !important;
         margin-bottom: 0px;
@@ -259,6 +259,31 @@ main {
           margin: 0 auto;
           color: #fff;
           text-decoration: none;
+        }
+      }
+    }
+  }
+  .registration {
+    background-image: url('/public/img/reg-bg.png');
+    padding: 193px 0;
+    &>div {
+      background-color: #00e1b7;
+      &>div {
+        &>div {
+          h2 {
+            color: #ffffff;
+            font-size: 35px;
+            font-weight: bold;
+            max-width: 665px;
+            margin:0 auto;
+            text-align: center;
+            padding: 57px 0;
+          }
+          form {
+            max-width: 500px;
+            margin: 0 auto;
+            margin-bottom: 57px;
+          }
         }
       }
     }

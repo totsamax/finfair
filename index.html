@@ -7,6 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+
   <title></title>
 </head>
 
@@ -52,7 +53,11 @@
         <span class="navbar-toggler-icon"></span>
       </button>
     </nav>
-    <div class="container-fluid header-bg">
+    <div class="container-fluid header-bg p-0">
+      <video loop muted autoplay poster="/public/img/header-background.png" class="fullscreen-bg__video">
+        <source src="/public/img/bgvideo.mp4" type="video/mp4">
+      </video>
+
       <div class="elements elements-left"></div>
       <div class="container">
         <div class="row">
@@ -76,43 +81,32 @@
     <div class="container ">
 
       <!-- Three columns of text below the carousel -->
-      <div class="d-flex flex-wrap justify-content-center numbers">
+      <div class="d-flex  justify-content-center numbers">
+        <div class="col">
+          <div>
+            <h2>3</h2>
+            <p>дня</p>
+          </div>
+        </div>
         <div class="col ">
           <div>
             <h2>8000</h2>
             <p>человек</p>
           </div>
-
-
         </div>
-        <div class="col-3">
+        <div class="col">
           <div>
-            <h2>16</h2>
-            <p>спикеров</p>
+            <h2>80</h2>
+            <p>лекций</p>
           </div>
-
         </div>
         <div class="col ">
           <div>
-            <h2>7</h2>
-            <p>тематических зон</p>
+            <h2>120</h2>
+            <p>спикеров</p>
           </div>
-
         </div>
-        <div class="col-3  ">
-          <div>
-            <h2>27</h2>
-            <p>лекций</p>
-          </div>
 
-        </div>
-        <div class="col-3 ">
-          <div>
-            <h2>3</h2>
-            <p>дня</p>
-          </div>
-
-        </div>
       </div>
 
       <!-- START THE about -->
@@ -209,9 +203,143 @@
       <!-- /.container -->
 
     </div>
+    <div class="container-fluid registration">
+      <div class="container">
+        <div class="row ">
+          <div class="col">
+            <h2>Зарегистрируйся и посети фестиваль финансовых решений</h2>
+            <form>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <input type="text" class="form-control" id="name" placeholder="ФИО">
+                </div>
+
+              </div>
+              <div class="form-row">
+
+                <div class="form-group col-md-6">
+                  <input type="tel" class="form-control" id="tel" placeholder="Телефон">
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <select id="inputSex" class="form-control">
+                    <option selected>Пол</option>
+                    <option>Мужской</option>
+                    <option>Женский</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <select id="inputSex" class="form-control">
+                    <option selected>Возраст</option>
+                    <option>16-18</option>
+                    <option>19-24</option>
+                    <option>25-29</option>
+                    <option>30-39</option>
+                    <option>40-49</option>
+                    <option>50-59</option>
+                    <option>60 и старше</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <select id="inputSex" class="form-control">
+                    <option>Место работы</option>
+                    <option>Не работаю</option>
+                    <option>Собственный бизнес</option>
+                    <option>Студент</option>
+                    <option>Автомобильный бизнес</option>
+                    <option>Гостиницы, рестораны, общепит</option>
+                    <option>Государственные организации</option>
+                    <option>Добывающая отрасль</option>
+                    <option>ЖКХ</option>
+                    <option>Информационные технологии</option>
+                    <option>Искусство, культура</option>
+                    <option>Лесная промышленность, деревообработка</option>
+                    <option>Медицина, фармацевтика, аптеки</option>
+                    <option>Образовательные учреждения</option>
+                    <option>Общественная деятельность, партии, благотворительность, НКО</option>
+                    <option>Перевозки, логистика, склад</option>
+                    <option>Продукты питания</option>
+                    <option>Промышленное оборудование и комплектующие</option>
+                    <option>Розничная торговля</option>
+                    <option>СМИ, маркетинг, реклама, BTL, PR, дизайн, продюсирование</option>
+                    <option>Сельское хозяйство</option>
+                    <option>Строительство, недвижимость, эксплуатация, проектирование</option>
+                    <option>Телекоммуникации, связь</option>
+                    <option>Тяжелое машиностроение</option>
+                    <option>Управление многопрофильными активами</option>
+                    <option>Услуги для бизнеса</option>
+                    <option>Услуги для населения</option>
+                    <option>Финансовый сектор</option>
+                    <option>Химическое производство, удобрения</option>
+                    <option>Электроника, приборостроение, бытовая техника, компьютеры и оргтехника</option>
+                    <option>Энергетика</option>
+
+                  </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <select id="inputSex" class="form-control">
+                    <option>Должность</option>
+                    <option>Студент</option>
+                    <option>Стажер</option>
+                    <option>Младший специалист</option>
+                    <option>Специалист</option>
+                    <option>Старший специалист</option>
+                    <option>Руководитель среднего звена</option>
+                    <option>Руководитель высшего звена</option>
+                    <option>ТОП-менеджер, учредитель, владелец</option>
+
+                  </select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <select id="inputSex" class="form-control">
+                    <option>Размер личных накоплений\сбережений</option>
+                    <option>0-50 тыс.руб.</option>
+                    <option>50-150 тыс.руб.</option>
+                    <option>150 -250 тыс. руб. более 250 тыс.руб</option>
+
+
+                  </select>
+                </div>
+                <div class="form-group col-md-12">
+                  <select id="inputSex" class="form-control">
+                    <option>Сколько готовы инвестировать в % от свободных денег</option>
+                    <option>0-10%</option>
+                    <option>10-20%</option>
+                    <option>20-30%</option>
+                    <option>30-40%</option>
+                    <option>40-50%</option>
+                    <option>50-60%</option>
+                    <option>60-70%</option>
+                    <option>70-80%</option>
+                    <option>80-90%</option>
+                    <option>90-100%</option>
+
+
+                  </select>
+                </div>
+              </div>
+              <div class="form-group text-center">
+
+                <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
     <!-- FOOTER -->
     <footer class="container-fluid">
-      <div class="container d-flex footer-container">
+      <div class="container d-flex footer-container p-0">
         <a class="navbar-brand align-self-stretch" href="#">
           <img src="/public/img/logo.png" alt="">
         </a>
@@ -241,7 +369,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Контакты</a>
           </li>
-        </ul> 
+        </ul>
         <ul class="d-flex socials">
           <li>
             <a class="vk" href="#">
