@@ -64,21 +64,16 @@ header {
         vertical-align: middle;
         color: #ffffff;
         font-family: Montserrat;
-        font-size: 15px;
+        font-size: 16px;
         font-weight: normal;
-        /* Text style for "О проекте" */
-        letter-spacing: 0.38px;
+        letter-spacing: 0.4px;
         padding: 0;
         position: relative;
         border-right: 2px solid;
         line-height: 1;
         padding-right: 18px;
         margin-right: 18px;
-        margin-bottom: 13px; // &::after {
-        //   content: '|';
-        //   display: inline-block;
-        //   padding: 0 18px;
-        // }
+        margin-bottom: 13px;
       }
     }
   }
@@ -237,7 +232,7 @@ main {
       font-weight: bold;
     }
     .card {
-      border: none; 
+      border: none;
       justify-content: center;
       flex-direction: column;
       text-align: center;
@@ -263,11 +258,59 @@ main {
           opacity: 1;
           margin: 0 auto;
           color: #fff;
-          text-decoration:none;
+          text-decoration: none;
         }
       }
     }
   }
+  footer {
+    height: 281px;
+    background-color: #00e1b7;
+    .footer-container {
+      flex-direction: row;
+      position: relative;
+    }
+    .nav-footer {
+      display: flex;
+      align-self: center;
+      flex-direction: row;
+      padding: 0;
+      flex-wrap: wrap;
+      padding-top: 40px;
+      .nav-item {
+        line-height: 15px;
+        text-align: left;
+        list-style: none;
+        &:last-child a {
+          border: none;
+        }
+        .nav-link {
+          line-height: 34px;
+          vertical-align: middle;
+          color: #ffffff;
+          font-size: 16px;
+          font-weight: normal;
+          letter-spacing: 0.4px;
+          padding: 0;
+          position: relative;
+          border-right: 2px solid;
+          line-height: 1;
+          padding-right: 18px;
+          margin-right: 18px;
+          margin-bottom: 13px;
+          white-space: nowrap;
+        }
+      }
+    }
+    .socials {
+      list-style: none;
+      position: absolute;
+      top: 216px;
+      left: 260px;
+      padding: 0;
+      li {
+        padding: 0 16px 0 0;
+      }
+    }
+  }
 }
-
-// Your customize CSS
