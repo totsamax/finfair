@@ -1,6 +1,8 @@
 //@import './carousel.css';
 @import './Montserrat.css';
 $red: #df5a5a;
+$blue:#0179d6;
+$green:#00e1b7;
 * {
   font-family: 'Montserrat';
 }
@@ -19,6 +21,22 @@ h2 {
 
 .red-background {
   background-color: #ff5a5a;
+}
+
+.navbar {
+  background-color: $blue;
+  @include media-breakpoint-up(xs) {
+    height: auto;
+    padding: 10px;
+  }
+  @include media-breakpoint-up(md) {
+    height: 121px;
+    padding: 0;
+  }
+}
+
+.navbar-toggler:not(:disabled):not(.disabled) {
+  color: white;
 }
 
 nav,
@@ -46,9 +64,14 @@ nav,
 
 header {
   overflow: visible;
-  .fullscreen-bg__video{
+  .fullscreen-bg__container {
+    overflow: hidden;
+    max-height: 800px;
+    position: relative;
+  }
+  .fullscreen-bg__video {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
@@ -89,6 +112,7 @@ header {
     display: block;
     position: absolute;
     top: 0;
+    z-index: 1;
     &.elements-left {
       width: 179px;
       height: 967px;
@@ -100,10 +124,17 @@ header {
       background-position: center;
       background-position-x: -65px;
       background-position-y: 0;
-      z-index: 0;
+      z-index: 1;
     }
-    .elements-right {
+    &.elements-right {
       right: 0;
+      top: 22px;
+      width: 313px;
+      height: 779px;
+      background-image: url('../../public/img/header-right-elements.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      z-index: 1;
     }
   }
   .header-bg {
@@ -114,12 +145,20 @@ header {
   .container {
     .row {
       .col {
-        height: 800px;
+        @include media-breakpoint-up(md) {
+          height: 800px;
+        }
         padding-top: 310px;
         h1 {
           /* Style for "Фестиваль" */
-          color: #ffffff;
-          font-size: 65px;
+          @include media-breakpoint-up(xs) {
+            color: $blue;
+            font-size: 45px;
+          }
+          @include media-breakpoint-up(md) {
+            color: #ffffff;
+            font-size: 65px;
+          }
           font-weight: 800;
           text-transform: uppercase;
           margin-bottom: 15px;
@@ -131,6 +170,14 @@ header {
           font-weight: normal;
           text-transform: uppercase;
           margin-bottom: 40px;
+          @include media-breakpoint-up(xs) {
+            color: $blue;
+            font-size: 25px;
+          }
+          @include media-breakpoint-up(md) {
+            color: #ffffff;
+            font-size: 30px;
+          }
         }
         form {
           input {
@@ -157,8 +204,11 @@ header {
 
 main {
   .numbers {
-    padding-top: 143px;
+    @include media-breakpoint-up(md) {
+      padding-top: 143px;
+    }
     margin-bottom: 150px;
+    flex-wrap: wrap;
     &>div:last-child {
       border-right: none;
     }
@@ -275,7 +325,7 @@ main {
             font-size: 35px;
             font-weight: bold;
             max-width: 665px;
-            margin:0 auto;
+            margin: 0 auto;
             text-align: center;
             padding: 57px 0;
           }
@@ -288,20 +338,50 @@ main {
       }
     }
   }
-  footer {
-    height: 281px;
-    background-color: #00e1b7;
-    .footer-container {
-      flex-direction: row;
-      position: relative;
+}
+
+footer {
+  min-height: 281px;
+  background-color: #00e1b7;
+  .footer-container {
+    flex-direction: row;
+    position: relative;
+  }
+  .nav-footer {
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    padding: 0;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    @include media-breakpoint-up(xs) {
+      .nav-item {
+        line-height: 15px;
+        text-align: left;
+        list-style: none;
+        display: inline-block;
+        &:last-child a {
+          border: none;
+        }
+        .nav-link {
+          line-height: 34px;
+          vertical-align: middle;
+          color: #ffffff;
+          font-size: 16px;
+          font-weight: normal;
+          letter-spacing: 0.4px;
+          padding: 0;
+          position: relative;
+          border-right: 2px solid;
+          line-height: 1;
+          padding-right: 18px;
+          margin-right: 18px;
+          margin-bottom: 13px;
+          white-space: nowrap;
+        }
+      }
     }
-    .nav-footer {
-      display: flex;
-      align-self: center;
-      flex-direction: row;
-      padding: 0;
-      flex-wrap: wrap;
-      padding-top: 40px;
+    @include media-breakpoint-up(sm) {
       .nav-item {
         line-height: 15px;
         text-align: left;
@@ -327,7 +407,19 @@ main {
         }
       }
     }
-    .socials {
+  }
+  .socials {
+    @include media-breakpoint-up(xs) {
+      list-style: none;
+      position: relative;
+      padding: 0;
+      display: inline-block;
+      li {
+        display: inline-block;
+        padding: 0 16px 0 0;
+      }
+    }
+    @include media-breakpoint-up(sm) {
       list-style: none;
       position: absolute;
       top: 216px;
