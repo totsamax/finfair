@@ -111,19 +111,9 @@ const config = {
       template: 'index.html',
       favicon: './public/icon.ico',
       minify: !IS_DEV && {
-        collapseWhitespace: true,
-        preserveLineBreaks: true,
+        collapseWhitespace: false,
+        preserveLineBreaks: false,
         removeComments: true,
-      },
-    }),
-    new HtmlWebPackPlugin({
-      template: 'reg.html',
-      favicon: './public/icon.ico',
-      minify: !IS_DEV && {
-        collapseWhitespace: true,
-        preserveLineBreaks: true,
-        removeComments: true,
-        filename: './dist/registration.html',
       },
     }),
     new ExtractTextPlugin('styles.css'),
