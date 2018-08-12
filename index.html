@@ -315,45 +315,62 @@
         <div class="row ">
           <div class="col">
             <h2>Зарегистрируйся и посети фестиваль финансовых решений</h2>
-            <form id="regForm">
+            <form id="regForm" class="needs-validation" novalidate>
 
               <div class="form-row">
                 <div class="form-group col-md-12">
-                  <input type="text" class="form-control" id="lastName" placeholder="Фамилия" data-validation="length" data-validation-length="min4" >
+                  <input type="text" class="form-control" id="lastName" placeholder="Фамилия" required>
+                  <div class="invalid-feedback">
+                    Пожалуйста, укажите вашу Фамилию
+                  </div>
                 </div>
               </div>
 
               <div class="form-row">
-                  <div class="form-group col-md-12">
-                    <input type="text" class="form-control" id="firstName" placeholder="Имя" >
+                <div class="form-group col-md-12">
+                  <input type="text" class="form-control" id="firstName" placeholder="Имя" required>
+                  <div class="invalid-feedback">
+                    Пожалуйста, укажите ваше Имя
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <input type="text" class="form-control" id="patronymicName" placeholder="Отчество">
+                </div>
+
+              </div>
+              <div class="form-row">
+
+                <div class="form-group col-md-6">
+                  <input type="tel" class="form-control" id="tel" placeholder="Телефон" required>
+                  <div class="invalid-feedback">
+                    Пожалуйста, укажите номер телефона
                   </div>
                 </div>
 
-              <div class="form-row">
-                <div class="form-group col-md-12">
-                  <input type="text" class="form-control" id="patronymicName" placeholder="Отчество" >
-                </div>
-              </div>
-              <div class="form-row">
-
                 <div class="form-group col-md-6">
-                  <input type="tel" class="form-control" id="tel" placeholder="Телефон" >
-                </div>
-                <div class="form-group col-md-6">
-                  <input type="email" class="form-control" id="email" placeholder="Email" >
+                  <input type="email" class="form-control" id="email" placeholder="Email" required>
+                  <div class="invalid-feedback">
+                    Пожалуйста, укажите корректную электронную почту
+                  </div>
                 </div>
 
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <select id="inputSex" class="form-control" >
+                  <select id="inputSex" class="form-control" required>
                     <option value='' selected>Пол</option>
                     <option value='Мужской'>Мужской</option>
                     <option value='Женский'>Женский</option>
                   </select>
+                  <div class="invalid-feedback">
+                    Выберите, пожалуйста, пол
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
-                  <select id="inputAge" class="form-control" >
+                  <select id="inputAge" class="form-control" required>
                     <option value='' selected>Возраст</option>
                     <option value='16-18'>16-18</option>
                     <option value='19-24'>19-24</option>
@@ -362,13 +379,17 @@
                     <option value='40-49'>40-49</option>
                     <option value='50-59'>50-59</option>
                     <option value='60 и старше'>60 и старше</option>
+
                   </select>
+                  <div class="invalid-feedback">
+                    Выберите, пожалуйста, возраст
+                  </div>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <select id="inputJob" class="form-control" >
-                    <option value='Место работы'>Место работы</option>
+                  <select id="inputJob" class="form-control" required>
+                    <option value=''>Место работы</option>
                     <option value='Не работаю'>Не работаю</option>
                     <option value='Собственный бизнес'>Собственный бизнес</option>
                     <option value='Студент'>Студент</option>
@@ -401,9 +422,12 @@
                     <option value='Энергетика'>Энергетика</option>
 
                   </select>
+                  <div class="invalid-feedback">
+                    Выберите, пожалуйста, место работы
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
-                  <select id="inputPosition" class="form-control" >
+                  <select id="inputPosition" class="form-control" required>
                     <option value=''>Должность</option>
                     <option value='Студент'>Студент</option>
                     <option value='Стажер'>Стажер</option>
@@ -415,22 +439,26 @@
                     <option value='ТОП-менеджер, учредитель, владелец'>ТОП-менеджер, учредитель, владелец</option>
 
                   </select>
+                  <div class="invalid-feedback">
+                    Выберите, пожалуйста, должность
+                  </div>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-12">
-                  <select id="inputSalary" class="form-control" >
+                  <select id="inputSalary" class="form-control" required>
                     <option value=''>Размер личных сбережений</option>
                     <option value='0-50 тыс.руб.'>0-50 тыс.руб.</option>
                     <option value='50-150 тыс.руб.'>50-150 тыс.руб.</option>
-                    <option value='150 -250 тыс.руб.'>150 -250 тыс.руб.</option>
+                    <option value='150-250 тыс.руб.'>150-250 тыс.руб.</option>
                     <option value='более 250 тыс.руб.'>более 250 тыс.руб.</option>
-
-
                   </select>
+                  <div class="invalid-feedback">
+                    Выберите, пожалуйста, размер личных сбережений
+                  </div>
                 </div>
                 <div class="form-group col-md-12">
-                  <select id="inputInvest" class="form-control" >
+                  <select id="inputInvest" class="form-control" required>
                     <option value=''>Сколько готовы инвестировать в % от свободных денег</option>
                     <option value='0-10%'>0-10%</option>
                     <option value='10-20%'>10-20%</option>
@@ -438,11 +466,14 @@
                     <option value='30-40%'>30-40%</option>
                     <option value='40-50%'>40-50%</option>
                     <option value='50-60%'>50-60%</option>
-                    <option value='60-70%<'>60-70%</option>
+                    <option value='60-70%'>60-70%</option>
                     <option value='70-80%'>70-80%</option>
                     <option value='80-90%'>80-90%</option>
                     <option value='90-100%'>90-100%</option>
                   </select>
+                  <div class="invalid-feedback">
+                    Выберите, пожалуйста, сколько готовы инвестировать
+                  </div>
                 </div>
               </div>
               <div class="form-group text-center">
@@ -559,7 +590,7 @@
     </div>
 
   </footer>
-  
+
 </body>
 
 </html>
