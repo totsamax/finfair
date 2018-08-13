@@ -15,10 +15,7 @@ $('#lastName,#firstName,#patronymicName').mask(
     },
   }
 );
-('use strict');
-
 var regForm = $('#regForm');
-var data = {};
 
 window.addEventListener(
   'load',
@@ -28,13 +25,14 @@ window.addEventListener(
       form.addEventListener(
         'submit',
         function(event) {
+          var data = {};
           if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
           } else {
             event.preventDefault();
             $.each(regForm[0], function(k, v) {
-              if (v.id != 'btnSubmit') {
+              if (v.id != 'btnSubmit' && v.id != 'sendCode') {
                 data[v.id] = v.value;
               }
             });
@@ -43,7 +41,7 @@ window.addEventListener(
             var settings = {
               async: true,
               crossDomain: true,
-              url: 'https://finfair2018.ru/webreg.php',
+              url: 'https://finfair2018.ru/webreg.new.php',
               method: 'POST',
               headers: {
                 'X-API-Key':
@@ -54,18 +52,12 @@ window.addEventListener(
               },
               data: data,
             };
-            $.ajax(settings)
-              .done(function(response) {
-                console.log(response);
+            $.ajax(settings).always(function(response) {
+              if (response == 'Error: code invalid') {
+                $('#code').val('');
+                form.classList.add('was-validated');
+              } else {
                 $(regForm).html('<h3>Вы успешно зарегистрированы!</h3>');
-              })
-              .always(function() {
-                $(regForm).html('<h3>Вы успешно зарегистрированы!</h3>');
-              });
-
-            $.each(regForm[0], function(k, v) {
-              if (v && v.id && v.id != 'btnSubmit' && v.value) {
-                v.value = '';
               }
             });
           }
@@ -77,3 +69,45 @@ window.addEventListener(
   },
   false
 );
+$('.toregistration').click(function(event) {
+  event.preventDefault();
+  $([document.documentElement, document.body]).animate(
+    {
+      scrollTop: $('#regForm').offset().top,
+    },
+    2000
+  );
+});
+$('#sendCode').click(function(event) {
+  event.preventDefault();
+  if (
+    document.getElementById('sendCode').disabled == false &&
+    document.getElementById('tel').checkValidity() == true
+  ) {
+    var data = JSON.stringify({
+      tel: $('#tel').val(),
+    });
+    console.log(data);
+    var settings = {
+      async: true,
+      crossDomain: true,
+      url: 'https://finfair2018.ru/webreg.new.php',
+      method: 'POST',
+      headers: {
+        'X-API-Key':
+          '997d223bc24b9afd1ccec8fd7dd66e200da4b2eccecabd14e039f4d79e00c61139daa6e7864e0c87aa3813180d6e86c3',
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Cache-Control': 'no-cache',
+        'Postman-Token': 'a778497f-9d04-4ff7-ab0e-7d9a965fcf15',
+      },
+      data: data,
+    };
+    $.ajax(settings).always(function() {
+      console.log('Код отправлен');
+      document.getElementById('sendCode').disabled = true;
+      setTimeout(function() {
+        document.getElementById('sendCode').disabled = false;
+      }, 30000);
+    });
+  }
+});

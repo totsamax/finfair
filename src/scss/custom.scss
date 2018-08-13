@@ -84,6 +84,12 @@ nav,
 
 header {
   overflow: visible;
+  @include media-breakpoint-up(xs) {
+    padding-top: 50px;
+  }
+  @include media-breakpoint-up(md) {
+    padding-top: 121px;
+  }
   .fullscreen-bg__container {
     overflow: hidden;
     max-height: 800px;
@@ -162,7 +168,7 @@ header {
       right: 0;
       top: 22px;
       width: 313px;
-      height: 779px;
+      height: 828px;
       background-image: url('../../public/img/header-right-elements.png');
       background-repeat: no-repeat;
       background-size: 100%;
@@ -245,11 +251,24 @@ main {
       border-right: none;
     }
     div {
-      border-right: #000000 solid 2px;
+      @include media-breakpoint-up(xs) {
+        border: none;
+      }
+      @include media-breakpoint-up(md) {
+        border-right: #000000 solid 2px;
+      }
       text-align: center;
       margin-bottom: 40px;
       flex: 1 1 auto;
       width: auto;
+      &>* {
+        @include media-breakpoint-up(xs) {
+          text-align: center
+        }
+        @include media-breakpoint-up(md) {
+          text-align: left
+        }
+      }
       div {
         padding: 0px 40px !important;
         margin-bottom: 0px;
@@ -421,6 +440,7 @@ main {
 footer {
   min-height: 281px;
   background-color: #00e1b7;
+  height: 100%;
   .footer-container {
     flex-direction: row;
     position: relative;
