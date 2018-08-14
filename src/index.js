@@ -36,6 +36,7 @@ window.addEventListener(
                 data[v.id] = v.value;
               }
             });
+            data.timestamp = (Date.now() / 1000) | 0;
             data = JSON.stringify(data);
             console.log(data);
             var settings = {
