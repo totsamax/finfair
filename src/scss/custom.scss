@@ -187,14 +187,16 @@ header {
           height: 800px;
         }
         padding-top: 310px;
+        color:#f6df6b;
         h1 {
           /* Style for "Фестиваль" */
+          
           @include media-breakpoint-up(xs) {
             color: $blue;
             font-size: 45px;
           }
           @include media-breakpoint-up(md) {
-            color: #ffffff;
+            color:#f6df6b;
             font-size: 65px;
           }
           font-weight: 800;
@@ -202,6 +204,7 @@ header {
           margin-bottom: 15px;
         }
         h2 {
+          
           /* Style for "17 июля -" */
           color: #ffffff;
           font-size: 30px;
@@ -213,7 +216,7 @@ header {
             font-size: 25px;
           }
           @include media-breakpoint-up(md) {
-            color: #ffffff;
+            color:#f6df6b;
             font-size: 30px;
           }
         }
@@ -429,6 +432,9 @@ main {
               background-color: #0179d6;
               border-radius: 0;
               margin-top: 50px;
+            }
+            .btn-code{ 
+              border-color: #ced4da;
             }
           }
         }

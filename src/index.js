@@ -107,7 +107,9 @@ $('#sendCode').click(function(event) {
       console.log('Код отправлен');
       document.getElementById('sendCode').disabled = true;
       setTimeout(function() {
-        document.getElementById('sendCode').disabled = false;
+        if (document.getElementById('sendCode')) {
+          document.getElementById('sendCode').disabled = false;
+        }
       }, 30000);
     });
   }
