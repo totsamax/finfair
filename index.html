@@ -102,7 +102,18 @@
   </noscript>
 
   <!-- End Facebook Pixel Code -->
-  <script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?158",t.onload=function(){VK.Retargeting.Init("VK-RTRG-272260-2wr3j"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-272260-2wr3j" style="position:fixed; left:-999px;" alt=""/></noscript>
+  <script type="text/javascript">
+    ! function () {
+      var t = document.createElement("script");
+      t.type = "text/javascript", t.async = !0, t.src = "https://vk.com/js/api/openapi.js?158", t.onload = function () {
+        VK.Retargeting.Init("VK-RTRG-272260-2wr3j"), VK.Retargeting.Hit()
+      }, document.head.appendChild(t)
+    }();
+
+  </script>
+  <noscript>
+    <img src="https://vk.com/rtrg?p=VK-RTRG-272260-2wr3j" style="position:fixed; left:-999px;" alt="" />
+  </noscript>
 </head>
 
 <body>
@@ -297,25 +308,86 @@
 
 
 
-        <div class="row partners">
-          <div class="col">
-            <h2>Партнеры</h2>
-            <h3>Генеральный партнер</h3>
-          </div>
-        </div>
+
 
 
 
       </div> -->
 
       <!-- /.container -->
-
+      <div class="row partners">
+        <div class="col">
+          <h2>Партнеры</h2>
+          <h3>Стратегический партнер</h3>
+          <div class="container p-0">
+            <div class="">
+              <div class=" partner">
+                <img src="./public/img/partners/MM_LOGO_line+block.png" alt="">
+              </div>
+            </div>
+          </div>
+          <h3>Генеральный партнер</h3>
+          <div class="container p-0">
+            <div class="">
+              <div class=" partner">
+                <img src="./public/img/partners/VTB-Capital.png" alt="">
+              </div>
+            </div>
+          </div>
+          <h3>Партнёры по экспозиционной программе</h3>
+          <div class="container">
+            <div class="row p-15">
+              <div class="partner">
+                <img src="./public/img/partners/open_logo.png" alt="">
+              </div>
+              <div class="partner">
+                <img src="./public/img/partners/Logo_broker.jpg" alt="">
+              </div>
+              <div class="partner">
+                <img src="./public/img/partners/finam.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <h3>ПАРТНЕРЫ ПО ОБРАЗОВАТЕЛЬНОЙ ПРОГРАММЕ</h3>
+          <div class="container">
+            <div class="row p-15">
+              <div class="partner">
+                <img src="./public/img/partners/NES_logo.PNG" alt="">
+              </div>
+              <div class="partner">
+                <img src="./public/img/partners/logo_с_hse_cmyk.jpg" alt="">
+              </div> 
+            </div>
+          </div>
+          <h3>ГЛАВНЫЙ ИНФОРМАЦИНЫЙ ПАРТНЕР </h3>
+          <div class="container">
+            <div class="row p-15">
+              <div class="partner">
+                <img src="./public/img/partners/logo-rianovosti-full.jpg" alt="">
+              </div> 
+            </div>
+          </div>
+          <h3>ИНФОРМАЦИОНЫЕ ПАРТНЕРЫ</h3>
+          <div class="container">
+            <div class="row p-15">
+              <div class="partner">
+                <img src="./public/img/partners/fo_logo_tr_Hi.jpg" alt="">
+              </div>
+              <div class="partner">
+                <img src="./public/img/partners/logo_prime.JPG" alt="">
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="container-fluid registration">
       <div class="container">
         <div class="row ">
           <div class="col">
-            <h2>Зарегистрируйся и посети ярмарку финансовых решений <a name="registration"></a></h2>
+            <h2>Зарегистрируйся и посети ярмарку финансовых решений
+              <a name="registration"></a>
+            </h2>
             <form id="regForm" class="needs-validation" novalidate>
 
               <div class="form-row">
@@ -360,12 +432,12 @@
 
               </div>
               <div class="form-row">
-                <div class="form-group col-md-6"> 
-                    <button class="btn btn-code" id="sendCode">Отправить код</button>
+                <div class="form-group col-md-6">
+                  <button class="btn btn-code" id="sendCode">Отправить код</button>
                 </div>
               </div>
               <div class="form-row">
- 
+
                 <div class="form-group col-md-12">
                   <input type="email" class="form-control" id="email" placeholder="Email" required>
                   <div class="invalid-feedback">
@@ -492,8 +564,15 @@
                   </div>
                 </div>
               </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="agreement" required>
+                <label class="form-check-label" for="agreement">
+                  Я принимаю
+                  <a href="/public/files/pol-opd.pdf">условия политики обработки персональных данных</a> ПАО Московская Биржа и настоящим даю
+                  <a href="/public/files/soglasie.pdf">согласие на обработку</a> ПАО Московская Биржа моих персональных данных
+                </label>
+              </div>
               <div class="form-group text-center">
-
                 <button type="submit" class="btn btn-reg" id="btnSubmit">Зарегистрироваться</button>
               </div>
             </form>

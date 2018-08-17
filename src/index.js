@@ -2,7 +2,7 @@ import 'bootstrap';
 import './scss/index.scss';
 import 'jquery-mask-plugin';
 $('#tel').mask('+7(999) 999 99 99', {
-  placeholder: '+7(***)*** ** **',
+  placeholder: '+7(***) *** ** **',
 });
 $('#lastName,#firstName,#patronymicName').mask(
   'SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS',

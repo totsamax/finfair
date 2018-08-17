@@ -190,13 +190,12 @@ header {
         color:#f6df6b;
         h1 {
           /* Style for "Фестиваль" */
-          
           @include media-breakpoint-up(xs) {
             color: $blue;
             font-size: 45px;
           }
           @include media-breakpoint-up(md) {
-            color:#f6df6b;
+            color: #f6df6b;
             font-size: 65px;
           }
           font-weight: 800;
@@ -204,7 +203,6 @@ header {
           margin-bottom: 15px;
         }
         h2 {
-          
           /* Style for "17 июля -" */
           color: #ffffff;
           font-size: 30px;
@@ -216,7 +214,7 @@ header {
             font-size: 25px;
           }
           @include media-breakpoint-up(md) {
-            color:#f6df6b;
+            color: #f6df6b;
             font-size: 30px;
           }
         }
@@ -387,6 +385,33 @@ main {
       }
     }
   }
+  .partners {
+    margin-bottom: 117px;
+    h2 {
+      padding: 0 0 30px 0;
+    }
+    h3 {
+      padding: 20px 0 12px 0;
+      color: #000000; 
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 22.06px;
+      text-transform: uppercase; 
+      letter-spacing: 0.2px;
+    }
+    .partner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      height: 200px; 
+      margin-right: 20px;
+      img{
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
   .registration {
     background-image: url("../../public/img/reg-bg.png");
     padding: 193px 0;
@@ -433,7 +458,7 @@ main {
               border-radius: 0;
               margin-top: 50px;
             }
-            .btn-code{ 
+            .btn-code {
               border-color: #ced4da;
             }
           }
