@@ -3,6 +3,10 @@
 $red: #df5a5a;
 $blue:#0179d6;
 $green:#00e1b7;
+.mb-20 {
+  margin-bottom: 20px;
+}
+
 .tag-red {
   border: 3px solid #ff5a5a;
   color: #ff5a5a;
@@ -45,6 +49,7 @@ h2 {
 
 .navbar {
   background-color: $blue;
+  flex-wrap: nowrap;
   @include media-breakpoint-up(xs) {
     height: auto;
     padding: 10px;
@@ -61,13 +66,25 @@ h2 {
 
 nav,
 .navbar-brand {
-  padding-top: 0 !important;
-  height: 121px;
-  overflow: visible;
+  @include media-breakpoint-up(xs) {
+    height: 121px;
+    overflow: visible;
+    padding-right: 60px;
+    position: absolute;
+    top: 0;
+  }
+  @include media-breakpoint-up(md) {
+    position: relative;
+  }
 }
 
-.navbar-brand {
-  padding-right: 60px;
+.navbar-collapse {
+  @include media-breakpoint-up(xs) {
+    margin-left: 150px;
+  }
+  @include media-breakpoint-up(md) {
+    margin-left: 0px;
+  }
 }
 
 .btn {
@@ -84,15 +101,17 @@ nav,
 
 header {
   overflow: visible;
+  height: 700px;
   @include media-breakpoint-up(xs) {
     padding-top: 50px;
   }
   @include media-breakpoint-up(md) {
+    height: 800px;
     padding-top: 121px;
   }
   .fullscreen-bg__container {
     overflow: hidden;
-    max-height: 800px;
+    height: 100%;
     position: relative;
   }
   .fullscreen-bg__video {
@@ -102,6 +121,15 @@ header {
     right: 0;
     bottom: 0;
     width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: auto;
+    overflow: hidden;
   }
   .pattern {
     display: block;
@@ -157,7 +185,7 @@ header {
       width: 297px;
       height: 702px;
       left: 0;
-      top: 168px;
+      top: 270px;
       background-image: url('../../public/img/header-left-elements.png');
       background-repeat: no-repeat;
       background-size: 100%;
@@ -183,11 +211,11 @@ header {
   .container {
     .row {
       .col {
-        @include media-breakpoint-up(md) {
-          height: 800px;
+        padding-top: 200px;
+        color: #f6df6b;
+        @include media-breakpoint-up(lg) {
+          padding-top: 310px;
         }
-        padding-top: 310px;
-        color:#f6df6b;
         h1 {
           /* Style for "Фестиваль" */
           @include media-breakpoint-up(xs) {
@@ -243,8 +271,9 @@ header {
 
 main {
   .numbers {
+    padding-top: 100px;
     @include media-breakpoint-up(md) {
-      padding-top: 143px;
+      padding-top: 200px;
     }
     margin-bottom: 68px;
     flex-wrap: wrap;
@@ -392,11 +421,11 @@ main {
     }
     h3 {
       padding: 20px 0 12px 0;
-      color: #000000; 
+      color: #000000;
       font-size: 20px;
       font-weight: bold;
       line-height: 22.06px;
-      text-transform: uppercase; 
+      text-transform: uppercase;
       letter-spacing: 0.2px;
     }
     .partner {
@@ -404,9 +433,11 @@ main {
       align-items: center;
       justify-content: center;
       width: 200px;
-      height: 200px; 
+      height: 200px;
       margin-right: 20px;
-      img{
+      margin-bottom: 20px;
+      border: 2px solid #ddd;
+      img {
         max-width: 100%;
         max-height: 100%;
       }
@@ -417,6 +448,7 @@ main {
     padding: 193px 0;
     background-position: center;
     background-size: cover;
+    margin-bottom: 150px;
     &>div {
       background-color: #ffe062;
       &>div {
@@ -469,12 +501,20 @@ main {
 }
 
 footer {
+  a:not(:disabled) {
+    cursor: pointer;
+  }
   min-height: 281px;
   background-color: #00e1b7;
   height: 100%;
   .footer-container {
     flex-direction: row;
     position: relative;
+    flex-wrap: wrap;
+    .navbar-brand {
+      position: absolute;
+      padding: 0;
+    }
   }
   .nav-footer {
     display: flex;
@@ -483,6 +523,7 @@ footer {
     padding: 0;
     flex-wrap: wrap;
     padding-top: 40px;
+    
     @include media-breakpoint-up(xs) {
       .nav-item {
         line-height: 15px;
@@ -515,6 +556,7 @@ footer {
       }
     }
     @include media-breakpoint-up(sm) {
+      margin-left: 150px;
       .nav-item {
         line-height: 15px;
         text-align: left;
@@ -542,25 +584,74 @@ footer {
     }
   }
   .socials {
-    @include media-breakpoint-up(xs) {
-      list-style: none;
-      position: relative;
-      padding: 0;
+    list-style: none;
+    position: relative;
+    padding: 0;
+    display: inline-block;
+    
+    li {
       display: inline-block;
-      li {
-        display: inline-block;
-        padding: 0 16px 0 0;
-      }
+      padding: 0 16px 0 0;
     }
     @include media-breakpoint-up(sm) {
-      list-style: none;
-      position: absolute;
-      top: 216px;
-      left: 200px;
-      padding: 0;
-      li {
-        padding: 0 16px 0 0;
+      margin-left: 150px;
+    }
+  }
+}
+
+.contacts {
+  .modal-lg {
+    max-width: 1140px;
+  }
+  .modal-content {
+    .modal-body {
+      padding: 3rem;
+    }
+    border: none;
+    border-radius: 0;
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 35px;
+    }
+    .container.address-tel {
+      margin: 0 0 70px 0;
+      .address {
+        padding-left: 0;
+        @include media-breakpoint-up(md) {
+          border-right: 2px solid;
+          padding-right: 50px;
+          font-size: 20px;
+        }
+      }
+      .telephone {
+        padding-left: 0;
+        @include media-breakpoint-up(md) {
+          padding-left: 50px;
+          font-size: 20px;
+        }
       }
     }
+    .emails {
+      margin: 0 0 70px 0;
+      font-size: 20px;
+      line-height: 35px;
+    }
+  }
+}
+
+.close:not(:disabled):not(.disabled) {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: 2px solid;
+  border-radius: 100%;
+  span {
+    width: 100%;
+    height: 100%;
+    display: block;
+    line-height: 27px;
+    vertical-align: middle;
+    text-align: center;
   }
 }

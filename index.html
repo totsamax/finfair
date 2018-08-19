@@ -1,11 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru_RU">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes, user-scalable=no">
+  <meta name="description" content="Ярмарка Финансовых решений">
 
 
   <title>Ярмарка Финансовых решений</title>
@@ -121,9 +120,9 @@
   <header>
     <div class="elements elements-left d-none d-md-block"></div>
     <div class="elements elements-right d-none d-md-block"></div>
-    <nav class="navbar navbar-expand-md fixed-top red-background ">
+    <nav class="navbar navbar-expand-md fixed-top red-background p-3">
       <div class="container p-0">
-        <a class="navbar-brand d-none d-md-block" href="#">
+        <a id="LogoHeader" class="navbar-brand">
           <img src="/public/img/logo.png" alt="">
         </a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -135,7 +134,7 @@
               <a class="nav-link disabled" href="#">Программа мероприятий</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Куда сходить до</a>
+              <a class="nav-link disabled" href="#">Уже сейчас</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" href="#">Карта мероприятия</a>
@@ -144,7 +143,7 @@
               <a class="nav-link disabled" href="#">Мобильное приложение</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link toregistration" href="#registration">Регистрация</a>
+              <a id="MenuRegHeader" class="nav-link toregistration" href="#registration">Регистрация</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" href="#">Важная информация</a>
@@ -153,35 +152,27 @@
 
         </div>
       </div>
-
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+      <button class="navbar-toggler d-block d-md-none" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
         aria-expanded="false" aria-label="Toggle navigation">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
-          <title>Menu</title>
+          <title>Меню</title>
           <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path>
         </svg>
       </button>
     </nav>
+
     <div class="container-fluid header-bg p-0 fullscreen-bg__container">
-      <video loop muted autoplay poster="/public/img/header-background.png" class="fullscreen-bg__video">
-        <source src="/public/img/bgvideo.mp4" type="video/mp4">
+      <video loop muted autoplay poster="/public/img/header-background.png" type='video/mp4' class="fullscreen-bg__video">
+        <source src="/public/img/bgvideo.mp4" type='video/mp4'>
         <source src="/public/img/bgvideo.webm" type="video/webm">
+        <source src="/public/img/bgvideo.ogv" type="video/ogg">
       </video>
-      <!-- <div class="pattern"></div> -->
-
-
+      <div class="pattern"></div>
       <div class="container">
         <div class="row">
           <div class="col">
             <h1>Ярмарка Финансовых решений</h1>
             <h2>21 — 23 сентября 2018</h2>
-            <!-- <form class="form-inline mt-2 mt-md-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Ваше имя" aria-label="Ваше имя">
-              <input class="form-control mr-sm-2" type="text" placeholder="Телефон" aria-label="Телефон">
-              <input class="form-control mr-sm-2" type="text" placeholder="Email" aria-label="Email">
-              <button class="btn btn-reg my-2 my-sm-0" type="submit">Зарегистрироваться</button>
-            </form> -->
           </div>
         </div>
       </div>
@@ -315,78 +306,14 @@
       </div> -->
 
       <!-- /.container -->
-      <div class="row partners">
-        <div class="col">
-          <h2>Партнеры</h2>
-          <h3>Стратегический партнер</h3>
-          <div class="container p-0">
-            <div class="">
-              <div class=" partner">
-                <img src="./public/img/partners/MM_LOGO_line+block.png" alt="">
-              </div>
-            </div>
-          </div>
-          <h3>Генеральный партнер</h3>
-          <div class="container p-0">
-            <div class="">
-              <div class=" partner">
-                <img src="./public/img/partners/VTB-Capital.png" alt="">
-              </div>
-            </div>
-          </div>
-          <h3>Партнёры по экспозиционной программе</h3>
-          <div class="container">
-            <div class="row p-15">
-              <div class="partner">
-                <img src="./public/img/partners/open_logo.png" alt="">
-              </div>
-              <div class="partner">
-                <img src="./public/img/partners/Logo_broker.jpg" alt="">
-              </div>
-              <div class="partner">
-                <img src="./public/img/partners/finam.jpg" alt="">
-              </div>
-            </div>
-          </div>
-          <h3>ПАРТНЕРЫ ПО ОБРАЗОВАТЕЛЬНОЙ ПРОГРАММЕ</h3>
-          <div class="container">
-            <div class="row p-15">
-              <div class="partner">
-                <img src="./public/img/partners/NES_logo.PNG" alt="">
-              </div>
-              <div class="partner">
-                <img src="./public/img/partners/logo_с_hse_cmyk.jpg" alt="">
-              </div> 
-            </div>
-          </div>
-          <h3>ГЛАВНЫЙ ИНФОРМАЦИНЫЙ ПАРТНЕР </h3>
-          <div class="container">
-            <div class="row p-15">
-              <div class="partner">
-                <img src="./public/img/partners/logo-rianovosti-full.jpg" alt="">
-              </div> 
-            </div>
-          </div>
-          <h3>ИНФОРМАЦИОНЫЕ ПАРТНЕРЫ</h3>
-          <div class="container">
-            <div class="row p-15">
-              <div class="partner">
-                <img src="./public/img/partners/fo_logo_tr_Hi.jpg" alt="">
-              </div>
-              <div class="partner">
-                <img src="./public/img/partners/logo_prime.JPG" alt="">
-              </div> 
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
     <div class="container-fluid registration">
       <div class="container">
         <div class="row ">
           <div class="col">
+            <span id="regAnchor" name="registration"></span>
             <h2>Зарегистрируйся и посети ярмарку финансовых решений
-              <a name="registration"></a>
             </h2>
             <form id="regForm" class="needs-validation" novalidate>
 
@@ -460,8 +387,7 @@
                 <div class="form-group col-md-6">
                   <select id="inputAge" class="form-control" required>
                     <option value='' selected>Возраст</option>
-                    <option value='16-18'>16-18</option>
-                    <option value='19-24'>19-24</option>
+                    <option value='18-24'>18-24</option>
                     <option value='25-29'>25-29</option>
                     <option value='30-39'>30-39</option>
                     <option value='40-49'>40-49</option>
@@ -581,12 +507,79 @@
       </div>
 
     </div>
+    <div class="container">
+      <div class="row partners">
+        <div class="col">
+          <h2>Партнеры</h2>
+          <h3>Стратегический партнер</h3>
+          <div class="container p-0 mb-20">
+            <div class="">
+              <div class=" partner">
+                <img src="./public/img/partners/MM_LOGO_line+block.png" alt="">
+              </div>
+            </div>
+          </div>
+          <h3>Генеральный партнер</h3>
+          <div class="container p-0 mb-20">
+            <div class="">
+              <div class=" partner">
+                <img src="./public/img/partners/VTB-Capital.png" alt="">
+              </div>
+            </div>
+          </div>
+          <h3>Партнёры по экспозиционной программе</h3>
+          <div class="container mb-20">
+            <div class="row p-15">
+              <div class="partner">
+                <img src="./public/img/partners/open_logo.png" alt="">
+              </div>
+              <div class="partner">
+                <img src="./public/img/partners/Logo_broker.jpg" alt="">
+              </div>
+              <div class="partner">
+                <img src="./public/img/partners/finam.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <h3>ПАРТНЕРЫ ПО ОБРАЗОВАТЕЛЬНОЙ ПРОГРАММЕ</h3>
+          <div class="container mb-20">
+            <div class="row p-15">
+              <div class="partner">
+                <img src="./public/img/partners/NES_logo.PNG" alt="">
+              </div>
+              <div class="partner">
+                <img src="./public/img/partners/logo_с_hse_cmyk.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <h3>ГЛАВНЫЙ ИНФОРМАЦИНЫЙ ПАРТНЕР </h3>
+          <div class="container mb-20">
+            <div class="row p-15">
+              <div class="partner">
+                <img src="./public/img/partners/logo-rianovosti-full.jpg" alt="">
+              </div>
+            </div>
+          </div>
+          <h3>ИНФОРМАЦИОНЫЕ ПАРТНЕРЫ</h3>
+          <div class="container mb-20">
+            <div class="row p-15">
+              <div class="partner">
+                <img src="./public/img/partners/fo_logo_tr_Hi.jpg" alt="">
+              </div>
+              <div class="partner">
+                <img src="./public/img/partners/logo_prime.JPG" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- FOOTER -->
 
   </main>
   <footer class="container-fluid">
     <div class="container d-block d-sm-flex footer-container p-0">
-      <a class="navbar-brand align-self-stretch d-none d-sm-block" href="#">
+      <a id="LogoFooter" class="navbar-brand align-self-stretch d-none d-sm-block" href="/">
         <img src="/public/img/logo.png" alt="">
       </a>
 
@@ -598,7 +591,7 @@
           <a class="nav-link disabled" href="#">Программа мероприятий</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Куда сходить до</a>
+          <a class="nav-link disabled" href="#">Уже сейчас</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#">Карта мероприятия</a>
@@ -607,18 +600,18 @@
           <a class="nav-link disabled" href="#">Мобильное приложение</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link toregistration" href="#">Регистрация</a>
+          <a id="MenuRegFooter" class="nav-link toregistration">Регистрация</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#">Важная информация</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Контакты</a>
+          <a class="nav-link" data-toggle="modal" data-target="#contacts-modal">Контакты</a>
         </li>
       </ul>
       <ul class="d-block d-sm-flex socials">
         <li>
-          <a class="vk" href="https://vk.com/finfair">
+          <a id="IconVK" class="vk" href="https://vk.com/finfair">
             <svg id="SVGDoc" width="43" height="25" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
               xmlns:avocode="https://avocode.com/" viewBox="0 0 43 25">
               <defs></defs>
@@ -634,7 +627,7 @@
           </a>
         </li>
         <li>
-          <a class="inst" href="https://www.instagram.com/moscow_exchange/">
+          <a id="IconIG" class="inst" href="https://www.instagram.com/moscow_exchange/">
             <svg id="SVGDoc" width="25" height="25" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
               xmlns:avocode="https://avocode.com/" viewBox="0 0 25 25">
               <defs></defs>
@@ -650,7 +643,7 @@
           </a>
         </li>
         <li>
-          <a class="fb" href="https://www.facebook.com/events/2111001395817803/">
+          <a id="IconFB" class="fb" href="https://www.facebook.com/events/2111001395817803/">
             <svg id="SVGDoc" width="12" height="26" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
               xmlns:avocode="https://avocode.com/" viewBox="0 0 12 26">
               <defs></defs>
@@ -683,7 +676,43 @@
         </li> -->
       </ul>
     </div>
-
+    <div class="modal fade p-0 contacts" id="contacts-modal" tabindex="-1" role="dialog" aria-labelledby="contactsmodealTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h2>Контактная информация</h2>
+            <div class="container address-tel p-0 d-flex flex-wrap justify-content-start">
+              <div class="col-xs-12 col-md-6 address">
+                <h3>Адрес офиса:</h3>
+                <span>115162, г. Москва, ул. Шаболовка, 31А</span>
+              </div>
+              <div class="col-xs-12 col-md-6 col-lg-4 telephone">
+                <h3>Телефон:</h3>
+                <span>+7 (495) 961-01-60</span>
+              </div>
+            </div>
+            <div class="container emails p-0 d-flex justify-content-start">
+              <div class="col-xs-12">
+                <h3>Почтовые адреса:</h3>
+                <div>
+                  <a href="mailto:press@finfair2018.ru">press@finfair2018.ru</a> ‒ аккредитация СМИ</div>
+                <div>
+                  <a href="media@finfair2018.ru">media@finfair2018.ru</a> ‒ по вопросам информационного партнерства</div>
+                <div>
+                  <a href="registration@finfair2018.ru">registration@finfair2018.ru</a> ‒ вопросы по регистрации</div>
+              </div>
+            </div>
+            <div class="container d-block">
+              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aae722e6c9cecc72d378d92c7a3d81e41d113be13dd8d7d0a222c763f3c352b45&amp;width=100%&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
 
 </body>
