@@ -190,17 +190,18 @@ $('#agreement').on('invalid', function() {
 $('#tel').mask('+7(999) 999 99 99', {
   placeholder: '+7(***) *** ** **',
 });
-$('#lastName,#firstName,#patronymicName').mask(
-  'SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS',
-  {
-    translation: {
-      S: {
-        pattern: /[А-Яа-я]/,
-        optional: true,
-      },
-    },
-  }
-);
+// $('#lastName,#firstName,#patronymicName').mask(
+//   'SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS',
+//   {
+//     translation: {
+//       S: {
+//         pattern: /[А-Яа-я]/,
+//         optional: true,
+//       },
+//     },
+//   }
+// );
+ 
 var regForm = $('#regForm');
 
 window.addEventListener(

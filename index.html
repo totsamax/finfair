@@ -319,25 +319,25 @@
 
               <div class="form-row">
                 <div class="form-group col-md-12">
-                  <input type="text" class="form-control" id="lastName" placeholder="Фамилия" required>
+                  <input type="text" class="form-control" id="lastName" placeholder="Фамилия" pattern="^[А-Яа-яЁё\s]+$" required>
                   <div class="invalid-feedback">
-                    Пожалуйста, укажите вашу Фамилию
+                    Пожалуйста, укажите вашу Фамилию (кириллица)
                   </div>
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group col-md-12">
-                  <input type="text" class="form-control" id="firstName" placeholder="Имя" required>
+                  <input type="text" class="form-control" id="firstName" placeholder="Имя" pattern="^[А-Яа-яЁё\s]+$" required>
                   <div class="invalid-feedback">
-                    Пожалуйста, укажите ваше Имя
+                    Пожалуйста, укажите ваше Имя (кириллица)
                   </div>
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group col-md-12">
-                  <input type="text" class="form-control" id="patronymicName" placeholder="Отчество">
+                  <input type="text" class="form-control" id="patronymicName" placeholder="Отчество" pattern="^[А-Яа-яЁё\s]+$">
                 </div>
 
               </div>
