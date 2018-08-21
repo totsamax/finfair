@@ -37,6 +37,20 @@ $('#IconIG').click(function() {
 $('#IconFB').click(function() {
   gtag('event', 'Click', { event_category: 'Page', event_label: 'IconFB' });
 });
+//8. Футер – Клик по кнопке "Контакты"
+$('#Menu_Footer_Contacts').click(function() {
+  gtag('event', 'Click', {
+    event_category: 'Page',
+    event_label: 'Menu_Footer_Contacts',
+  });
+});
+//9. Закрыть поп-ап "Контакты"
+$('#Contacts_Close').click(function() {
+  gtag('event', 'Click', {
+    event_category: 'Popup',
+    event_label: 'Contacts_Close',
+  });
+});
 
 //GA-Форма
 //1. Клик по полю – Фамилия
