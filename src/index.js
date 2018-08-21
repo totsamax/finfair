@@ -266,6 +266,13 @@ window.addEventListener(
                     '<h3>Спасибо за регистрацию. Подтверждение участия будет направлено на указанный вами адрес электронной почты</h3>'
                   );
                 }
+                $([document.documentElement, document.body]).animate(
+                  {
+                    scrollTop:
+                      $('#regAnchor').offset().top - $('.navbar').height(),
+                  },
+                  0
+                );
               }
             });
           }
