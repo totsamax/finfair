@@ -510,6 +510,7 @@ main {
   }
   .partners {
     margin-bottom: 117px;
+    text-align: center;
     h2 {
       padding: 0 0 30px 0;
     }
@@ -688,6 +689,10 @@ footer {
     @include media-breakpoint-up(sm) {
       margin-left: 150px;
     }
+  }
+  .licence{
+    margin-top: 50px; 
+    opacity: 0.6;
   }
 }
 
