@@ -11,7 +11,10 @@ const IS_DEV = process.env.NODE_ENV === 'dev';
 const config = {
   mode: IS_DEV ? 'development' : 'production',
   devtool: IS_DEV ? 'eval' : 'source-map',
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    events: './src/events.js',
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
@@ -110,11 +113,24 @@ const config = {
     new HtmlWebPackPlugin({
       template: 'index.html',
       favicon: './public/icon.ico',
+      chunks: ['index'],
       minify: !IS_DEV && {
         collapseWhitespace: false,
         preserveLineBreaks: false,
         removeComments: true,
       },
+      filename: './index.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: 'events.html',
+      favicon: './public/icon.ico',
+      chunks: ['events'],
+      minify: !IS_DEV && {
+        collapseWhitespace: false,
+        preserveLineBreaks: false,
+        removeComments: true,
+      },
+      filename: './events.html',
     }),
     new ExtractTextPlugin('styles.css'),
   ],
