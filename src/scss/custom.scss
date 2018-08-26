@@ -451,5 +451,14 @@ footer {
     font-weight: 400;
     letter-spacing: 0.4px;
   }
-  .events-modal__more-button {}
+  .events-modal__more-button {
+    color: #000000;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    border: 2px solid;
+    border-radius: 0;
+  }
 }

@@ -63,8 +63,8 @@ main {
         @include media-breakpoint-up(md) {
           display: initial;
         }
-        *{
-            display: block;
+        * {
+          display: block;
         }
         b {
           font-size: 12px;
