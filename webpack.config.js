@@ -14,6 +14,7 @@ const config = {
   entry: {
     index: './src/index.js',
     events: './src/events.js',
+    preevents: './src/preevents.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -131,6 +132,17 @@ const config = {
         removeComments: true,
       },
       filename: './events.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: 'preevents.html',
+      favicon: './public/icon.ico',
+      chunks: ['preevents'],
+      minify: !IS_DEV && {
+        collapseWhitespace: false,
+        preserveLineBreaks: false,
+        removeComments: true,
+      },
+      filename: './preevents.html',
     }),
     new ExtractTextPlugin('styles.css'),
   ],

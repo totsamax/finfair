@@ -1,6 +1,9 @@
 @import '../../node_modules/bootstrap/scss/bootstrap';
-@import './Montserrat.css';
+@import './Montserrat.css'; 
+@import './jquery.bxslider.min.scss';
 //Общие стили
+ 
+
 $red: #df5a5a;
 $blue:#0179d6;
 $green:#00e1b7;
@@ -105,7 +108,7 @@ nav,
 }
 
 header {
-  &.header-small{
+  &.header-small {
     height: auto;
     margin-bottom: 150px;
   }
@@ -543,43 +546,43 @@ footer {
         color: black;
         border: solid 3px;
       }
-      &:hover{
-        border: solid 3px!important;
+      &:hover {
+        border: solid 3px !important;
       }
-      &--red { 
+      &--red {
         &.active {
           border-color: #df5a5a;
           background-color: #df5a5a;
         }
         &:hover {
-          border-color: #df5a5a!important;
+          border-color: #df5a5a !important;
         }
       }
-      &--green { 
+      &--green {
         &.active {
           border-color: #7fe0b8;
           background-color: #7fe0b8;
         }
         &:hover {
-          border-color: #7fe0b8!important;
+          border-color: #7fe0b8 !important;
         }
       }
-      &--blue { 
+      &--blue {
         &.active {
           border-color: #4377d2;
           background-color: #4377d2;
         }
         &:hover {
-          border-color: #4377d2!important;
+          border-color: #4377d2 !important;
         }
       }
-      &--yellow { 
-        &.active{
+      &--yellow {
+        &.active {
           border-color: #f6df6b;
           background-color: #f6df6b;
         }
         &:hover {
-          border-color: #f6df6b!important;
+          border-color: #f6df6b !important;
         }
       }
     }
@@ -789,7 +792,7 @@ footer {
 }
 
 //Программа мероприятий
-.page-events { 
+.page-events {
   .events {
     color: #000000;
     padding: 30px;
@@ -871,6 +874,52 @@ footer {
           margin-bottom: 0px;
         }
       }
+    }
+  }
+}
+
+//Уже сейчас
+.page-preevents {
+  .bx-wrapper{
+    border: none;
+    box-shadow: unset;
+    padding: 0;
+    margin: 0;
+    .bx-viewport{
+      height: 750px!important;
+      margin: 0 auto;
+      @include media-breakpoint-up(xs) {
+        width: 330px!important;
+      }
+      @include media-breakpoint-up(md) {
+        width: auto!important;
+      }
+    }
+  }
+  .preevent {
+    width: 330px;
+    height: 330px;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 45px;
+    margin-right: 20px;
+    background-color: #00e1b7;
+    //background-image : url('../../public/img/preevent-bg.png');
+    h3 {
+      color: #ffffff; 
+      font-size: 25px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.62px;
+    }
+    p {
+      color: #ffffff; 
+      font-size: 25px;
+      font-weight: 400; 
+      letter-spacing: 0.62px;
+    }
+    .preevent_date {
+      align-self: flex-end;
     }
   }
 }
