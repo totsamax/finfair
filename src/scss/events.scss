@@ -52,6 +52,9 @@ main {
         background-color: #e8e8e8;
         margin: 0 12px 12px 0;
         cursor: pointer;
+        &[data-toggle='modal']:hover {
+          background-color: #FCF0BD !important;
+        }
         @include media-breakpoint-up(xs) {
           display: none;
         }
