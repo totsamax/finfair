@@ -192,7 +192,7 @@
       <div class="row">
         <div class="col">
           <ul class="events-list d-flex flex-wrap justify-content-start p-0 m-0">
-            <li class="events-list__item all 1">
+            <li class="events-list__item all 1" data-toggle="modal" data-target="#events-modal-1">
               <b>12:45‒13:45</b>
               <p>Развернутое название темы</p>
             </li>
@@ -240,7 +240,7 @@
               <b>12:45‒13:45</b>
               <p>Развернутое название темы</p>
             </li>
-          </ul> 
+          </ul>
         </div>
       </div>
       <div class="row">
@@ -299,7 +299,7 @@
               <b>12:45‒13:45</b>
               <p>Развернутое название темы</p>
             </li>
-          </ul> 
+          </ul>
         </div>
       </div>
       <div class="row">
@@ -358,7 +358,7 @@
               <b>12:45‒13:45</b>
               <p>Развернутое название темы</p>
             </li>
-          </ul> 
+          </ul>
         </div>
       </div>
 
@@ -491,7 +491,28 @@
       </div>
     </div>
   </footer>
-
+  <div class="modal fade p-0 events-modal" id="events-modal-1" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h2>Название мероприятия </h2>
+          <p>17 сентября / 12:20 — 13:30</p>
+          <p>
+            Слухи о смерти промышленности в городах оказались преувеличенными. Сервис-ориентированный подход и концентрация кадрового
+            и научного потенциала – факторы, которые удерживают современные промышленные предприятия в черте городов. Здесь
+            развиваются инновационные, высокотехнологичные производства, как правило, небольшого размера, которые отличаются
+            гибкостью управления и могут внедрять передовые и сложные проекты, соответствующие концепции индустрии 4.0.
+          </p>
+          <p class="events-modal__speaker">
+            Спикер : Имя Фамилия
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

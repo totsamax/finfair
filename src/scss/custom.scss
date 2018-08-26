@@ -378,44 +378,43 @@ footer {
   }
 }
 
-.contacts {
-  .modal-lg {
-    max-width: 1140px;
+.modal-lg {
+  max-width: 1140px;
+}
+
+.modal-content {
+  .modal-body {
+    padding: 3rem;
   }
-  .modal-content {
-    .modal-body {
-      padding: 3rem;
-    }
-    border: none;
-    border-radius: 0;
-    h3 {
-      font-size: 20px;
-      font-weight: bold;
-      line-height: 35px;
-    }
-    .container.address-tel {
-      margin: 0 0 70px 0;
-      .address {
-        padding-left: 0;
-        @include media-breakpoint-up(md) {
-          border-right: 2px solid;
-          padding-right: 50px;
-          font-size: 20px;
-        }
-      }
-      .telephone {
-        padding-left: 0;
-        @include media-breakpoint-up(md) {
-          padding-left: 50px;
-          font-size: 20px;
-        }
+  border: none;
+  border-radius: 0;
+  h3 {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 35px;
+  }
+  .container.address-tel {
+    margin: 0 0 70px 0;
+    .address {
+      padding-left: 0;
+      @include media-breakpoint-up(md) {
+        border-right: 2px solid;
+        padding-right: 50px;
+        font-size: 20px;
       }
     }
-    .emails {
-      margin: 0 0 70px 0;
-      font-size: 20px;
-      line-height: 35px;
+    .telephone {
+      padding-left: 0;
+      @include media-breakpoint-up(md) {
+        padding-left: 50px;
+        font-size: 20px;
+      }
     }
+  }
+  .emails {
+    margin: 0 0 70px 0;
+    font-size: 20px;
+    line-height: 35px;
   }
 }
 
@@ -433,4 +432,24 @@ footer {
     vertical-align: middle;
     text-align: center;
   }
+}
+
+.events-modal {
+  h2 {
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 0.88px;
+  }
+  p {
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 0.63px;
+    margin-bottom: 50px;
+  }
+  .events-modal__speaker {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+  }
+  .events-modal__more-button {}
 }
