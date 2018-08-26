@@ -1,9 +1,7 @@
 @import '../../node_modules/bootstrap/scss/bootstrap';
-@import './Montserrat.css'; 
+@import './Montserrat.css';
 @import './jquery.bxslider.min.scss';
 //Общие стили
- 
-
 $red: #df5a5a;
 $blue:#0179d6;
 $green:#00e1b7;
@@ -880,19 +878,61 @@ footer {
 
 //Уже сейчас
 .page-preevents {
-  .bx-wrapper{
+  h1 {
+    font-size: 35px;
+    font-weight: 700;
+    /* Text style for "Уже сейчас" */
+    letter-spacing: 0.88px;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    /* Text style for "Т, екущие" */
+    letter-spacing: 0.5px;
+  }
+  .bx-wrapper {
     border: none;
     box-shadow: unset;
     padding: 0;
-    margin: 0;
-    .bx-viewport{
-      height: 750px!important;
+    margin: 0 0 150px;
+    .bx-viewport {
+      height: 750px !important;
       margin: 0 auto;
       @include media-breakpoint-up(xs) {
-        width: 330px!important;
+        width: 330px !important;
       }
       @include media-breakpoint-up(md) {
-        width: auto!important;
+        width: auto !important;
+      }
+    }
+    .bx-controls-direction a {
+      margin-top: -42px;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: none;
+      z-index: 2;
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
+    }
+    .bx-prev {
+      background-image: url('../../public/img/arrow-prev.png');
+      /* Style for "кнопка впр" */
+      width: 29px;
+      height: 41px;
+      margin-left: -50px;
+      &:hover {
+        background-image: url('../../public/img/arrow-prev-hover.png');
+      }
+    }
+    .bx-next {
+      background-image: url('../../public/img/arrow-next.png');
+      /* Style for "кнопка впр" */
+      width: 29px;
+      height: 41px;
+      margin-right: -65px;
+      &:hover {
+        background-image: url('../../public/img/arrow-next-hover.png');
       }
     }
   }
@@ -903,23 +943,33 @@ footer {
     display: block;
     margin-bottom: 45px;
     margin-right: 20px;
-    background-color: #00e1b7;
-    //background-image : url('../../public/img/preevent-bg.png');
+    cursor: pointer;
+    background-image: url('../../public/img/preevent-bg.png');
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    &:hover{
+      background-image: url('../../public/img/preevent-bg-hover.png');
+    }
     h3 {
-      color: #ffffff; 
+      color: #ffffff;
       font-size: 25px;
       font-weight: 400;
       text-transform: uppercase;
       letter-spacing: 0.62px;
+      border-bottom: 4px solid #fff;
+      align-self: flex-start;
+      padding-bottom: 10px;
     }
     p {
-      color: #ffffff; 
+      color: #ffffff;
       font-size: 25px;
-      font-weight: 400; 
+      font-weight: 400;
       letter-spacing: 0.62px;
     }
     .preevent_date {
       align-self: flex-end;
+      margin: 0;
     }
   }
 }
