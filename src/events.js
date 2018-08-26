@@ -1,6 +1,5 @@
 import 'bootstrap';
-import './scss/events.scss';
-
+import './scss/custom.scss';
 $(function() {
   var selectedClass = '';
   $('.filter-buttons__button').click(function() {

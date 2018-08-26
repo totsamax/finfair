@@ -1,5 +1,5 @@
 import 'bootstrap';
-import './scss/index.scss';
+import './scss/custom.scss';
 import 'jquery-mask-plugin';
 
 //GA - Страница
