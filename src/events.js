@@ -24,3 +24,30 @@ $(function() {
     // }, 300);
   });
 });
+$('.to21').click(function(event) {
+  event.preventDefault();
+  $([document.documentElement, document.body]).animate(
+    {
+      scrollTop: $('#to21').offset().top - 180,
+    },
+    1500
+  );
+});
+$('.to22').click(function(event) {
+  event.preventDefault();
+  $([document.documentElement, document.body]).animate(
+    {
+      scrollTop: $('#to22').offset().top - 180,
+    },
+    1500
+  );
+});
+$('.to23').click(function(event) {
+  event.preventDefault();
+  $([document.documentElement, document.body]).animate(
+    {
+      scrollTop: $('#to23').offset().top - 180,
+    },
+    1500
+  );
+});
