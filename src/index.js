@@ -1,15 +1,36 @@
 import 'bootstrap';
 import './scss/custom.scss';
 import 'jquery-mask-plugin';
+import '../node_modules/bxslider/dist/jquery.bxslider';
+
+$(document).ready(function() {
+  $('.slider').bxSlider({
+    auto: true,
+    minSlides: 1,
+    maxSlides: 3,
+    slideWidth: 330,
+    slideMargin: 20,
+    adaptiveHeight: true,
+    pager: false,
+    autoHover: true,
+    autoControls: true,
+  });
+});
 
 //GA - Страница
 //1. Логотип FINFAIR вверху
 $('#LogoHeader').click(function() {
-  gtag('event', 'Click', { event_category: 'Page', event_label: 'LogoHeader' });
+  gtag('event', 'Click', {
+    event_category: 'Page',
+    event_label: 'LogoHeader',
+  });
 });
 //2. Логотип FINFAIR внизу
 $('#LogoFooter').click(function() {
-  gtag('event', 'Click', { event_category: 'Page', event_label: 'LogoFooter' });
+  gtag('event', 'Click', {
+    event_category: 'Page',
+    event_label: 'LogoFooter',
+  });
 });
 //3. Кнопка "Регистрация" в хеддере
 $('#MenuRegHeader').click(function() {
@@ -27,15 +48,24 @@ $('#MenuRegFooter').click(function() {
 });
 //5. Клик по иконке – Вконтакте
 $('#IconVK').click(function() {
-  gtag('event', 'Click', { event_category: 'Page', event_label: 'IconVK' });
+  gtag('event', 'Click', {
+    event_category: 'Page',
+    event_label: 'IconVK',
+  });
 });
 //6. Клик по иконке – Instagram
 $('#IconIG').click(function() {
-  gtag('event', 'Click', { event_category: 'Page', event_label: 'IconIG' });
+  gtag('event', 'Click', {
+    event_category: 'Page',
+    event_label: 'IconIG',
+  });
 });
 //7. Клик по иконке – Facebook
 $('#IconFB').click(function() {
-  gtag('event', 'Click', { event_category: 'Page', event_label: 'IconFB' });
+  gtag('event', 'Click', {
+    event_category: 'Page',
+    event_label: 'IconFB',
+  });
 });
 //8. Футер – Клик по кнопке "Контакты"
 $('#Menu_Footer_Contacts').click(function() {
@@ -55,68 +85,122 @@ $('#Contacts_Close').click(function() {
 //GA-Форма
 //1. Клик по полю – Фамилия
 $('#lastName').click(function() {
-  gtag('event', 'Click', { event_category: 'Form', event_label: 'Surname' });
+  gtag('event', 'Click', {
+    event_category: 'Form',
+    event_label: 'Surname',
+  });
 });
 $('#lastName').on('invalid', function() {
-  gtag('event', 'Error', { event_category: 'Form', event_label: 'Surname' });
+  gtag('event', 'Error', {
+    event_category: 'Form',
+    event_label: 'Surname',
+  });
 });
 //2. Клик по полю – Имя
 $('#firstName').click(function() {
-  gtag('event', 'Click', { event_category: 'Form', event_label: 'Name' });
+  gtag('event', 'Click', {
+    event_category: 'Form',
+    event_label: 'Name',
+  });
 });
 $('#firstName').on('invalid', function() {
-  gtag('event', 'Error', { event_category: 'Form', event_label: 'Name' });
+  gtag('event', 'Error', {
+    event_category: 'Form',
+    event_label: 'Name',
+  });
 });
 //3. Клик по полю – Отчество
 $('#patronymicName').click(function() {
-  gtag('event', 'Click', { event_category: 'Form', event_label: 'Patronymic' });
+  gtag('event', 'Click', {
+    event_category: 'Form',
+    event_label: 'Patronymic',
+  });
 });
 //4. Клик по полю – телефон
 $('#tel').click(function() {
-  gtag('event', 'Click', { event_category: 'Form', event_label: 'Phone' });
+  gtag('event', 'Click', {
+    event_category: 'Form',
+    event_label: 'Phone',
+  });
 });
 $('#tel').on('invalid', function() {
-  gtag('event', 'Error', { event_category: 'Form', event_label: 'Phone' });
+  gtag('event', 'Error', {
+    event_category: 'Form',
+    event_label: 'Phone',
+  });
 });
 //5. Клик по кнопке – "отправить код"
 $('#sendCode').click(function() {
-  gtag('event', 'Click', { event_category: 'Form', event_label: 'SendCode' });
+  gtag('event', 'Click', {
+    event_category: 'Form',
+    event_label: 'SendCode',
+  });
 });
 //6. Клик по полю – Код из СМС
 $('#code').click(function() {
-  gtag('event', 'Click', { event_category: 'Form', event_label: 'SMS' });
+  gtag('event', 'Click', {
+    event_category: 'Form',
+    event_label: 'SMS',
+  });
 });
 $('#code').on('invalid', function() {
-  gtag('event', 'Error', { event_category: 'Form', event_label: 'SMS' });
+  gtag('event', 'Error', {
+    event_category: 'Form',
+    event_label: 'SMS',
+  });
 });
 //7. Клик по полю – e-mail
 $('#email').click(function() {
-  gtag('event', 'Click', { event_category: 'Form', event_label: 'E-mail' });
+  gtag('event', 'Click', {
+    event_category: 'Form',
+    event_label: 'E-mail',
+  });
 });
 $('#email').on('invalid', function() {
-  gtag('event', 'Error', { event_category: 'Form', event_label: 'E-mail' });
+  gtag('event', 'Error', {
+    event_category: 'Form',
+    event_label: 'E-mail',
+  });
 });
 //8. Клик по полю – Пол
 $('#inputSex').click(function() {
-  gtag('event', 'Click', { event_category: 'Form', event_label: 'Gender' });
+  gtag('event', 'Click', {
+    event_category: 'Form',
+    event_label: 'Gender',
+  });
 });
 $('#inputSex').on('invalid', function() {
-  gtag('event', 'Error', { event_category: 'Form', event_label: 'Gender' });
+  gtag('event', 'Error', {
+    event_category: 'Form',
+    event_label: 'Gender',
+  });
 });
 //9. Выбор значения – Пол
 $('#sendCode').change(function() {
-  gtag('event', 'Select', { event_category: 'Form', event_label: 'Gender' });
+  gtag('event', 'Select', {
+    event_category: 'Form',
+    event_label: 'Gender',
+  });
 });
 //10. Клик по полю – Возраст
 $('#inputAge').click(function() {
-  gtag('event', 'Click', { event_category: 'Form', event_label: 'Age' });
+  gtag('event', 'Click', {
+    event_category: 'Form',
+    event_label: 'Age',
+  });
 });
 $('#inputAge').on('invalid', function() {
-  gtag('event', 'Error', { event_category: 'Form', event_label: 'Age' });
+  gtag('event', 'Error', {
+    event_category: 'Form',
+    event_label: 'Age',
+  });
 });
 //11. Выбор значения – Возраст
 $('#inputAge').change(function() {
-  gtag('event', 'Select', { event_category: 'Form', event_label: 'Age' });
+  gtag('event', 'Select', {
+    event_category: 'Form',
+    event_label: 'Age',
+  });
 });
 //12. Клик по полю – Место работы
 $('#inputJob').click(function() {
@@ -140,36 +224,63 @@ $('#inputJob').change(function() {
 });
 //14. Клик по полю – Должность
 $('#inputPosition').click(function() {
-  gtag('event', 'Click', { event_category: 'Form', event_label: 'Position' });
+  gtag('event', 'Click', {
+    event_category: 'Form',
+    event_label: 'Position',
+  });
 });
 $('#inputPosition').on('invalid', function() {
-  gtag('event', 'Error', { event_category: 'Form', event_label: 'Position' });
+  gtag('event', 'Error', {
+    event_category: 'Form',
+    event_label: 'Position',
+  });
 });
 //15. Выбор значения – Должность
 $('#inputPosition').change(function() {
-  gtag('event', 'Select', { event_category: 'Form', event_label: 'Position' });
+  gtag('event', 'Select', {
+    event_category: 'Form',
+    event_label: 'Position',
+  });
 });
 //16. Клик по полю – Размер личных сбережений
 $('#inputSalary').click(function() {
-  gtag('event', 'Click', { event_category: 'Form', event_label: 'Savings' });
+  gtag('event', 'Click', {
+    event_category: 'Form',
+    event_label: 'Savings',
+  });
 });
 $('#inputSalary').on('invalid', function() {
-  gtag('event', 'Error', { event_category: 'Form', event_label: 'Savings' });
+  gtag('event', 'Error', {
+    event_category: 'Form',
+    event_label: 'Savings',
+  });
 });
 //17. Выбор значения – Размер личных сбережний
 $('#inputSalary').change(function() {
-  gtag('event', 'Select', { event_category: 'Form', event_label: 'Savings' });
+  gtag('event', 'Select', {
+    event_category: 'Form',
+    event_label: 'Savings',
+  });
 });
 //18. Клик по полю – Готовы инвестировать
 $('#inputInvest').click(function() {
-  gtag('event', 'Click', { event_category: 'Form', event_label: 'Invest' });
+  gtag('event', 'Click', {
+    event_category: 'Form',
+    event_label: 'Invest',
+  });
 });
 $('#inputInvest').on('invalid', function() {
-  gtag('event', 'Error', { event_category: 'Form', event_label: 'Invest' });
+  gtag('event', 'Error', {
+    event_category: 'Form',
+    event_label: 'Invest',
+  });
 });
 //19. Выбор значения – Готовы инвестировать
 $('#inputInvest').change(function() {
-  gtag('event', 'Select', { event_category: 'Form', event_label: 'Invest' });
+  gtag('event', 'Select', {
+    event_category: 'Form',
+    event_label: 'Invest',
+  });
 });
 //20. Клик по кнопке – "Зрегистрироваться"
 $('#btnSubmit').click(function() {
@@ -180,10 +291,16 @@ $('#btnSubmit').click(function() {
 });
 //20. Клик по чек-боксу "Я принимаю..."
 $('#agreement').click(function() {
-  gtag('event', 'Click', { event_category: 'Form', event_label: 'Rules' });
+  gtag('event', 'Click', {
+    event_category: 'Form',
+    event_label: 'Rules',
+  });
 });
 $('#agreement').on('invalid', function() {
-  gtag('event', 'Error', { event_category: 'Form', event_label: 'Rules' });
+  gtag('event', 'Error', {
+    event_category: 'Form',
+    event_label: 'Rules',
+  });
 });
 //GA - ОШИБКИ ФОРМЫ
 
