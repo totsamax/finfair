@@ -6,6 +6,7 @@ $red: #df5a5a;
 $blue:#0179d6;
 $green:#00e1b7;
 $yellow: #f6df6b;
+
 .mb-20 {
   margin-bottom: 20px;
 }
@@ -55,10 +56,12 @@ h2 {
 .navbar {
   background-color: $blue;
   flex-wrap: nowrap;
+
   @include media-breakpoint-up(xs) {
     height: auto;
     padding: 10px;
   }
+
   @include media-breakpoint-up(md) {
     height: 121px;
     padding: 0;
@@ -72,6 +75,7 @@ h2 {
 nav,
 .navbar-brand {
   padding: 0;
+
   @include media-breakpoint-up(xs) {
     height: 121px;
     overflow: visible;
@@ -79,6 +83,7 @@ nav,
     position: absolute;
     top: 0;
   }
+
   @include media-breakpoint-up(md) {
     position: relative;
   }
@@ -88,6 +93,7 @@ nav,
   @include media-breakpoint-up(xs) {
     margin-left: 150px;
   }
+
   @include media-breakpoint-up(md) {
     margin-left: 0px;
   }
@@ -110,20 +116,25 @@ header {
     height: auto;
     margin-bottom: 150px;
   }
+
   overflow: visible;
   height: 700px;
+
   @include media-breakpoint-up(xs) {
     padding-top: 50px;
   }
+
   @include media-breakpoint-up(md) {
     height: 800px;
     padding-top: 121px;
   }
+
   .fullscreen-bg__container {
     overflow: hidden;
     height: 100%;
     position: relative;
   }
+
   .fullscreen-bg__video {
     position: absolute;
     top: 0;
@@ -141,6 +152,7 @@ header {
     z-index: auto;
     overflow: hidden;
   }
+
   .pattern {
     display: block;
     position: absolute;
@@ -151,18 +163,22 @@ header {
     background-image: url('../../public/img/pattern.png');
     background-repeat: repeat;
   }
+
   .navbar-nav {
     flex-wrap: wrap;
     text-align: left;
+
     .btn-reg {
       position: absolute;
       right: 15px;
       padding: 0;
     }
+
     .nav-item {
       line-height: 15px;
       flex: none;
       text-align: left;
+
       .nav-link {
         /* Style for "О проекте" */
         line-height: 34px;
@@ -179,6 +195,7 @@ header {
         padding-right: 18px;
         margin-right: 18px;
         margin-bottom: 13px;
+
         &.disabled {
           cursor: default;
           opacity: 0.3;
@@ -186,11 +203,13 @@ header {
       }
     }
   }
+
   .elements {
     display: block;
     position: absolute;
     top: 0;
     z-index: 1;
+
     &.elements-left {
       width: 297px;
       height: 702px;
@@ -202,6 +221,7 @@ header {
       background-position: center;
       z-index: 1;
     }
+
     &.elements-right {
       right: 0;
       top: -55px;
@@ -213,37 +233,46 @@ header {
       z-index: 1;
     }
   }
+
   .header-bg {
     background: url('../../public/img/header-background.png');
     background-repeat: no-repeat;
     background-size: 100%;
   }
+
   .container {
     .row {
       .col {
         padding-top: 200px;
         color: #f6df6b;
+
         @include media-breakpoint-up(lg) {
           padding-top: 310px;
         }
+
         h1 {
+
           /* Style for "Фестиваль" */
           @include media-breakpoint-up(xs) {
             color: $blue;
             font-size: 40px;
           }
+
           @include media-breakpoint-up(sm) {
             color: $blue;
             font-size: 45px;
           }
+
           @include media-breakpoint-up(md) {
             color: #f6df6b;
             font-size: 65px;
           }
+
           font-weight: 800;
           text-transform: uppercase;
           margin-bottom: 15px;
         }
+
         h2 {
           /* Style for "17 июля -" */
           color: #ffffff;
@@ -251,15 +280,18 @@ header {
           font-weight: normal;
           text-transform: uppercase;
           margin-bottom: 40px;
+
           @include media-breakpoint-up(xs) {
             color: $blue;
             font-size: 25px;
           }
+
           @include media-breakpoint-up(md) {
             color: #f6df6b;
             font-size: 30px;
           }
         }
+
         form {
           input {
             &.form-control {
@@ -287,18 +319,22 @@ footer {
   a:not(:disabled) {
     cursor: pointer;
   }
+
   min-height: 281px;
   background-color: #00e1b7;
   height: 100%;
+
   .footer-container {
     flex-direction: row;
     position: relative;
     flex-wrap: wrap;
+
     .navbar-brand {
       position: absolute;
       padding: 0;
     }
   }
+
   .nav-footer {
     display: flex;
     align-self: center;
@@ -306,15 +342,18 @@ footer {
     padding: 0;
     flex-wrap: wrap;
     padding-top: 40px;
+
     @include media-breakpoint-up(xs) {
       .nav-item {
         line-height: 15px;
         text-align: left;
         list-style: none;
         display: inline-block;
+
         &:last-child a {
           border: none;
         }
+
         .nav-link {
           line-height: 34px;
           vertical-align: middle;
@@ -330,6 +369,7 @@ footer {
           margin-right: 18px;
           margin-bottom: 13px;
           white-space: nowrap;
+
           &.disabled {
             cursor: default;
             opacity: 0.3;
@@ -337,15 +377,19 @@ footer {
         }
       }
     }
+
     @include media-breakpoint-up(sm) {
       margin-left: 150px;
+
       .nav-item {
         line-height: 15px;
         text-align: left;
         list-style: none;
+
         &:last-child a {
           border: none;
         }
+
         .nav-link {
           line-height: 34px;
           vertical-align: middle;
@@ -365,19 +409,23 @@ footer {
       }
     }
   }
+
   .socials {
     list-style: none;
     position: relative;
     padding: 0;
     display: inline-block;
+
     li {
       display: inline-block;
       padding: 0 16px 0 0;
     }
+
     @include media-breakpoint-up(sm) {
       margin-left: 150px;
     }
   }
+
   .licence {
     margin-top: 50px;
     opacity: 0.6;
@@ -392,31 +440,39 @@ footer {
   .modal-body {
     padding: 3rem;
   }
+
   border: none;
   border-radius: 0;
+
   h3 {
     font-size: 20px;
     font-weight: bold;
     line-height: 35px;
   }
+
   .container.address-tel {
     margin: 0 0 70px 0;
+
     .address {
       padding-left: 0;
+
       @include media-breakpoint-up(md) {
         border-right: 2px solid;
         padding-right: 50px;
         font-size: 20px;
       }
     }
+
     .telephone {
       padding-left: 0;
+
       @include media-breakpoint-up(md) {
         padding-left: 50px;
         font-size: 20px;
       }
     }
   }
+
   .emails {
     margin: 0 0 70px 0;
     font-size: 20px;
@@ -430,6 +486,7 @@ footer {
   height: 30px;
   border: 2px solid;
   border-radius: 100%;
+
   span {
     width: 100%;
     height: 100%;
@@ -446,17 +503,20 @@ footer {
     font-weight: 700;
     letter-spacing: 0.88px;
   }
+
   p {
     font-size: 25px;
     font-weight: 400;
     letter-spacing: 0.63px;
     margin-bottom: 50px;
   }
+
   .events-modal__speaker {
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.4px;
   }
+
   .events-modal__more-button {
     color: #000000;
     font-family: Montserrat;
@@ -476,47 +536,57 @@ footer {
     box-shadow: unset;
     padding: 0;
     margin: 0 0 150px;
+
     .bx-viewport {
       height: 750px !important;
       margin: 0 auto;
+
       @include media-breakpoint-up(xs) {
         width: 330px !important;
       }
+
       @include media-breakpoint-up(md) {
         width: auto !important;
       }
     }
+
     .bx-controls-direction a {
       margin-top: -42px;
       background-position: center;
       background-repeat: no-repeat;
       display: none;
       z-index: 2;
+
       @include media-breakpoint-up(md) {
         display: block;
       }
     }
+
     .bx-prev {
       background-image: url('../../public/img/arrow-prev.png');
       /* Style for "кнопка впр" */
       width: 29px;
       height: 41px;
       margin-left: -50px;
+
       &:hover {
         background-image: url('../../public/img/arrow-prev-hover.png');
       }
     }
+
     .bx-next {
       background-image: url('../../public/img/arrow-next.png');
       /* Style for "кнопка впр" */
       width: 29px;
       height: 41px;
       margin-right: -65px;
+
       &:hover {
         background-image: url('../../public/img/arrow-next-hover.png');
       }
     }
   }
+
   .preevent {
     width: 330px;
     height: 330px;
@@ -528,6 +598,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     position: relative;
+
     h3 {
       color: #ffffff;
       font-size: 25px;
@@ -538,6 +609,7 @@ footer {
       align-self: flex-start;
       padding-bottom: 10px;
     }
+
     p {
       color: #ffffff;
       font-size: 18px;
@@ -545,6 +617,7 @@ footer {
       letter-spacing: 0.45px;
       width: 100%;
     }
+
     .preevent_date {
       align-self: flex-end;
       margin: 0;
@@ -553,6 +626,7 @@ footer {
       font-variant: small-caps;
       letter-spacing: 0.38px;
     }
+
     .gradient {
       position: absolute;
       top: 0;
@@ -572,6 +646,7 @@ footer {
       z-index: -1;
       background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.4) 100%);
     }
+
     img {
       position: absolute;
       top: 0;
@@ -591,35 +666,45 @@ footer {
       z-index: -2;
     }
   }
+
   .numbers {
     padding-top: 100px;
+
     @include media-breakpoint-up(md) {
       padding-top: 200px;
     }
+
     margin-bottom: 68px;
     flex-wrap: wrap;
+
     &>div:last-child {
       border-right: none;
     }
+
     div {
       @include media-breakpoint-up(xs) {
         border: none;
       }
+
       @include media-breakpoint-up(md) {
         border-right: #000000 solid 2px;
       }
+
       text-align: center;
       margin-bottom: 40px;
       flex: 1 1 auto;
       width: auto;
+
       &>* {
         @include media-breakpoint-up(xs) {
           text-align: center
         }
+
         @include media-breakpoint-up(md) {
           text-align: left
         }
       }
+
       div {
         padding: 0px 40px !important;
         margin-bottom: 0px;
@@ -627,12 +712,14 @@ footer {
         text-align: left;
         display: inline-block;
       }
+
       h2 {
         line-height: 100%;
         color: $red;
         font-size: 75px;
         font-weight: bold;
       }
+
       p {
         color: #000000;
         font-size: 30px;
@@ -642,13 +729,16 @@ footer {
       }
     }
   }
+
   .tags {
     background-color: #f5f5f5;
     padding: 100px 0;
+
     .nav-item {
       margin-bottom: 10px;
       white-space: nowrap;
     }
+
     .tags__tag {
       color: #000000;
       font-size: 20px;
@@ -660,50 +750,61 @@ footer {
       border: solid 3px transparent;
       border-radius: 0;
       white-space: normal;
+
       &.active {
         color: black;
         border: solid 3px;
       }
+
       &:hover {
         border: solid 3px !important;
       }
+
       &--red {
         &.active {
           border-color: #df5a5a;
           background-color: #df5a5a;
         }
+
         &:hover {
           border-color: #df5a5a !important;
         }
       }
+
       &--green {
         &.active {
           border-color: #7fe0b8;
           background-color: #7fe0b8;
         }
+
         &:hover {
           border-color: #7fe0b8 !important;
         }
       }
+
       &--blue {
         &.active {
           border-color: #4377d2;
           background-color: #4377d2;
         }
+
         &:hover {
           border-color: #4377d2 !important;
         }
       }
+
       &--yellow {
         &.active {
           border-color: #f6df6b;
           background-color: #f6df6b;
         }
+
         &:hover {
           border-color: #f6df6b !important;
         }
       }
     }
+
     .tags__devider {
       padding: 15px;
       /* Style for "̸̸̸" */
@@ -716,19 +817,23 @@ footer {
       /* Text style for "̸, ̸̸" */
       letter-spacing: 0.63px;
     }
+
     .tab-content>.tab-pane {
       display: none !important;
     }
+
     .tab-content>.active {
       display: flex !important;
       flex-wrap: wrap;
     }
+
     .tab-pane {
       .line {
         width: 160px;
         border-bottom: #000000 1px solid;
         margin-bottom: 40px;
       }
+
       p {
         color: #000000;
         font-family: Montserrat;
@@ -738,33 +843,41 @@ footer {
         /* Text style for "Есть много" */
         letter-spacing: 0.2px;
       }
+
       img {
         width: 100%;
       }
     }
   }
+
   .about {
     padding: 100px 0;
+
     h2 {
       display: inline-block;
     }
+
     .helper {
       display: inline-block;
       height: 100%;
       vertical-align: middle;
     }
+
     img {
       vertical-align: middle;
     }
+
     p {
       color: #000000;
       font-size: 20px;
       line-height: 35px;
     }
   }
+
   .events {
     display: block;
     margin-bottom: 194px;
+
     .nav {
       .nav-link {
         border: 2px solid #ff5a5a;
@@ -774,6 +887,7 @@ footer {
         letter-spacing: 1.4px;
         border-radius: 0;
         margin-right: 44px;
+
         &.active {
           background-color: #df5a5a;
           border: 2px solid #df5a5a;
@@ -784,24 +898,29 @@ footer {
         }
       }
     }
+
     h2 {
       color: #000000;
       font-size: 35px;
       font-weight: bold;
     }
+
     .card {
       border: none;
       justify-content: center;
       flex-direction: column;
       text-align: center;
+
       img {
         border-radius: none;
       }
+
       &:hover {
         .card-title {
           display: flex !important;
         }
       }
+
       .card-title {
         display: none !important;
         position: absolute;
@@ -812,6 +931,7 @@ footer {
         background-color: #df5a5a;
         opacity: 0.7;
         margin: 0;
+
         a {
           opacity: 1;
           margin: 0 auto;
@@ -821,12 +941,15 @@ footer {
       }
     }
   }
+
   .partners {
     margin-bottom: 117px;
     text-align: center;
+
     h2 {
       padding: 0 0 30px 0;
     }
+
     h3 {
       padding: 20px 0 12px 0;
       color: #000000;
@@ -836,6 +959,7 @@ footer {
       text-transform: uppercase;
       letter-spacing: 0.2px;
     }
+
     .partner {
       display: flex;
       align-items: center;
@@ -845,20 +969,24 @@ footer {
       margin-right: 20px;
       margin-bottom: 20px;
       border: 2px solid #ddd;
+
       img {
         max-width: 100%;
         max-height: 100%;
       }
     }
   }
+
   .registration {
     background-image: url("../../public/img/reg-bg.png");
     padding: 193px 0;
     background-position: center;
     background-size: cover;
     margin-bottom: 150px;
+
     &>div {
       background-color: #ffe062;
+
       &>div {
         &>div {
           h2 {
@@ -870,34 +998,42 @@ footer {
             text-align: center;
             padding: 57px 0;
           }
+
           form {
             max-width: 500px;
             margin: 0 auto;
             margin-bottom: 90px;
+
             .form-control {
               color: $blue;
+
               &::-webkit-input-placeholder {
                 /* Chrome/Opera/Safari */
                 color: $blue;
               }
+
               &::-moz-placeholder {
                 /* Firefox 19+ */
                 color: $blue;
               }
+
               &:-ms-input-placeholder {
                 /* IE 10+ */
                 color: $blue;
               }
+
               &:-moz-placeholder {
                 /* Firefox 18- */
                 color: $blue;
               }
             }
+
             .btn-reg {
               background-color: #0179d6;
               border-radius: 0;
               margin-top: 50px;
             }
+
             .btn-code {
               border-color: #ced4da;
             }
@@ -913,15 +1049,19 @@ footer {
   .events {
     color: #000000;
     padding: 30px;
+
     @include media-breakpoint-up(md) {
       padding: 0;
     }
+
     margin-bottom: 150px;
+
     h1 {
       font-size: 35px;
       font-weight: 700;
       letter-spacing: 0.88px;
     }
+
     h2 {
       font-size: 25px;
       font-weight: 400;
@@ -930,32 +1070,39 @@ footer {
       letter-spacing: 0.63px;
       border-bottom: 2px solid;
       width: 100%;
+
       span {
         opacity: 0.5;
         cursor: pointer;
+
         &:hover {
           text-decoration: underline;
         }
       }
     }
+
     .animation {
       background-color: $yellow !important;
       transition: all 0.5s;
     }
+
     .filter-buttons {
       .filter-buttons__button {
         margin-right: 17px;
         margin-bottom: 17px;
         border-radius: 0;
         border: none;
+
         &:hover {
           background-color: #FCF0BD !important;
         }
       }
     }
+
     .events-list {
       list-style: none;
       margin-top: 60px;
+
       .events-list__item {
         width: 146px;
         height: 190px;
@@ -963,23 +1110,29 @@ footer {
         background-color: #e8e8e8;
         margin: 0 12px 12px 0;
         cursor: pointer;
+
         &[data-toggle='modal']:hover {
           background-color: #FCF0BD !important;
         }
+
         @include media-breakpoint-up(xs) {
           display: none;
         }
+
         @include media-breakpoint-up(xs) {
           &.animation {
             display: initial;
           }
         }
+
         @include media-breakpoint-up(md) {
           display: initial;
         }
+
         * {
           display: block;
         }
+
         b {
           font-size: 12px;
           font-weight: 700;
@@ -989,6 +1142,7 @@ footer {
           line-height: 1;
           margin-bottom: 10px;
         }
+
         p {
           color: #000000;
           font-size: 12px;
@@ -1010,58 +1164,70 @@ footer {
     /* Text style for "Уже сейчас" */
     letter-spacing: 0.88px;
   }
+
   p {
     font-size: 20px;
     font-weight: 400;
     /* Text style for "Т, екущие" */
     letter-spacing: 0.5px;
   }
+
   .bx-wrapper {
     border: none;
     box-shadow: unset;
     padding: 0;
     margin: 0 0 150px;
+
     .bx-viewport {
       height: 750px !important;
       margin: 0 auto;
+
       @include media-breakpoint-up(xs) {
         width: 330px !important;
       }
+
       @include media-breakpoint-up(md) {
         width: auto !important;
       }
     }
+
     .bx-controls-direction a {
       margin-top: -42px;
       background-position: center;
       background-repeat: no-repeat;
       display: none;
       z-index: 2;
+
       @include media-breakpoint-up(md) {
         display: block;
       }
     }
+
     .bx-prev {
       background-image: url('../../public/img/arrow-prev.png');
       /* Style for "кнопка впр" */
       width: 29px;
       height: 41px;
       margin-left: -50px;
+
       &:hover {
         background-image: url('../../public/img/arrow-prev-hover.png');
       }
     }
+
     .bx-next {
       background-image: url('../../public/img/arrow-next.png');
       /* Style for "кнопка впр" */
       width: 29px;
       height: 41px;
       margin-right: -65px;
+
       &:hover {
         background-image: url('../../public/img/arrow-next-hover.png');
       }
     }
   }
+
   .preevent {
     width: 330px;
     height: 330px;
@@ -1074,9 +1240,11 @@ footer {
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
+
     &:hover {
       background-image: url('../../public/img/preevent-bg-hover.png');
     }
+
     h3 {
       color: #ffffff;
       font-size: 25px;
@@ -1087,6 +1255,7 @@ footer {
       align-self: flex-start;
       padding-bottom: 10px;
     }
+
     p {
       color: #ffffff;
       font-size: 18px;
@@ -1094,6 +1263,7 @@ footer {
       letter-spacing: 0.45px;
       width: 100%;
     }
+
     .preevent_date {
       align-self: flex-end;
       margin: 0;
@@ -1104,14 +1274,17 @@ footer {
 //Важная информация-----------------------------------------------
 .page-faq {
   counter-reset: section;
+
   h1 {
     color: #000000;
     font-size: 35px;
     font-weight: bold;
     letter-spacing: 0.88px;
   }
+
   .tags {
     margin: 50px 0 0px !important;
+
     .tags__tag {
       color: #000000;
       font-size: 20px;
@@ -1121,14 +1294,18 @@ footer {
       letter-spacing: 0.5px;
       display: inline-block;
       list-style: none;
+
       &:hover {}
+
       a {
         border: transparent solid 3px !important;
         color: black;
+
         &:hover {
           text-decoration: underline;
         }
       }
+
       .tags__devider {
         padding: 15px;
         /* Style for "̸̸̸" */
@@ -1142,21 +1319,26 @@ footer {
       }
     }
   }
+
   .questions {
     padding-top: 50px;
     padding-left: 70px;
+
     @include media-breakpoint-up(md) {
       padding-left: 15px;
     }
+
     &.questions--gray {
       background-color: #f5f5f5;
     }
+
     .questions__question-group {
       color: #4377d2;
       font-size: 20px;
       font-weight: bold;
       line-height: 35px;
       letter-spacing: 0.5px;
+
       &::before {
         counter-increment: section;
         content: counter(section) '.';
@@ -1164,14 +1346,18 @@ footer {
         left: -25px;
       }
     }
+
     .questions__list {
       ol {
         padding-left: 0;
+
         @include media-breakpoint-up(md) {
           padding-left: 40px;
         }
+
         counter-reset: item;
       }
+
       li {
         position: relative;
         list-style: none;
@@ -1183,6 +1369,7 @@ footer {
         text-transform: uppercase;
         letter-spacing: 0.5px;
         margin-bottom: 75px;
+
         p {
           text-transform: none;
           font-size: 20px;
@@ -1191,16 +1378,19 @@ footer {
           margin-bottom: 40px;
         }
       }
+
       li::before {
         counter-increment: item;
-        content: counter(section) '.' counter(item);
+        content: counter(section) '.'counter(item);
         display: block;
         position: absolute;
         top: 0;
         left: -55px;
       }
+
       li.skip-counter {
         counter-increment: item -1;
+
         &::before {
           content: " ";
         }
@@ -1219,12 +1409,15 @@ footer {
     letter-spacing: 0.88px;
     margin-bottom: 50px;
   }
+
   form {
     max-width: 550px;
+
     h3 {
       text-align: center;
       margin-bottom: 150px;
     }
+
     .btn-reg {
       margin: 60px auto;
       /* Style for "кнопка рег" */
@@ -1236,9 +1429,253 @@ footer {
       font-family: Montserrat;
       font-size: 25px;
       font-weight: normal;
+
       &:hover {
         background-color: darken(#b8b8b8, 20%);
       }
+    }
+  }
+}
+
+//Страница О проекте
+.page-about {
+  header {
+    .container .row .col {
+      padding-top: 200px !important;
+    }
+
+    h1,
+    h2 {
+      color: #fff !important;
+    }
+  }
+
+  .howitwas {
+    margin-bottom: 120px;
+
+    .howitwas-header {
+      color: #000000;
+      font-size: 55px;
+      font-weight: 700;
+      text-transform: uppercase;
+      /* Text style for "Как это бы" */
+      letter-spacing: 0.55px;
+    }
+
+    .numbers {
+      h2 {
+        color: #4377d2 !important;
+      }
+    }
+
+    .video-link {
+      color: black;
+      font-size: 20px;
+      font-weight: 500;
+      text-decoration: underline;
+      letter-spacing: 0.2px;
+    }
+  }
+
+  .bx-wrapper {
+    border: none;
+    box-shadow: unset;
+    padding: 0;
+    margin: 0 0 50px;
+    height: 208px;
+
+    img {
+      max-width: 100%;
+      display: block;
+      max-height: 100%;
+      margin: 0 auto;
+    }
+
+    li {
+      width: 250px;
+      height: 167px;
+    }
+
+    .bx-viewport {
+      height: 250px !important;
+      margin: 0 auto;
+
+      @include media-breakpoint-up(xs) {
+        width: 250px !important;
+      }
+
+      @include media-breakpoint-up(md) {
+        width: auto !important;
+      }
+    }
+
+    .bx-controls-direction a {
+      margin-top: -42px;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: none;
+      z-index: 2;
+
+      @include media-breakpoint-up(md) {
+        display: block;
+      }
+    }
+
+    .bx-prev {
+      background-image: url('../../public/img/arrow-prev.png');
+      /* Style for "кнопка впр" */
+      width: 29px;
+      height: 41px;
+      margin-left: -50px;
+
+      &:hover {
+        background-image: url('../../public/img/arrow-prev-hover.png');
+      }
+    }
+
+    .bx-next {
+      background-image: url('../../public/img/arrow-next.png');
+      /* Style for "кнопка впр" */
+      width: 29px;
+      height: 41px;
+      margin-right: -65px;
+
+      &:hover {
+        background-image: url('../../public/img/arrow-next-hover.png');
+      }
+    }
+  }
+
+  .numbers {
+    padding-top: 50px;
+    margin-bottom: 68px;
+    flex-wrap: wrap;
+
+    &>div:last-child {
+      border-right: none;
+    }
+
+    div {
+      @include media-breakpoint-up(xs) {
+        border: none;
+      }
+
+      @include media-breakpoint-up(md) {
+        border-right: #000000 solid 2px;
+      }
+
+      text-align: center;
+      margin-bottom: 40px;
+      flex: 1 1 auto;
+      width: auto;
+
+      &>* {
+        @include media-breakpoint-up(xs) {
+          text-align: center
+        }
+
+        @include media-breakpoint-up(md) {
+          text-align: left
+        }
+      }
+
+      div {
+        padding: 0px 40px !important;
+        margin-bottom: 0px;
+        border: none;
+        text-align: left;
+        display: inline-block;
+      }
+
+      h2 {
+        line-height: 100%;
+        color: $red;
+        font-size: 75px;
+        font-weight: bold;
+      }
+
+      p {
+        color: #000000;
+        font-size: 30px;
+        font-weight: normal;
+        margin-bottom: 0px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .about {
+    padding: 100px 0;
+
+    h2 {
+      display: inline-block;
+    }
+
+    .line {
+      /* Style for "Прямоуголь" */
+      width: 540px;
+      height: 3px;
+      background-color: #000000;
+      margin-bottom: 30px;
+    }
+
+    .lead {
+      color: #000000;
+      font-size: 30px;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      margin-bottom: 80px;
+    }
+
+    .lead-s {
+      font-size: 20px;
+      font-weight: 300;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+      text-align: right;
+    }
+
+    .helper {
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    p {
+      color: #000000;
+      font-size: 20px;
+      line-height: 35px;
+    }
+  }
+
+  .willbe {
+    min-height: 1000px;
+    background-image: url('../../public/img/about_bottom_bg.png');
+    background-size: cover;
+    border-color: #fff !important;
+    padding-top:120px;
+    .numbers>div {
+      border-color: #fff !important;
+    }
+    .numbers div div{
+      padding: 0!important;
+    }
+    h2 {
+      color: #ffffff !important;
+      font-family: Montserrat;
+      font-size: 55px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.55px;
+      
+    }
+
+    p {
+      color: #fff !important;
     }
   }
 }

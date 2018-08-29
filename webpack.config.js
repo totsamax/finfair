@@ -17,6 +17,7 @@ const config = {
     preevents: './src/preevents.js',
     faq: './src/faq.js',
     mmregistration: './src/mm-registration.js',
+    about: './src/about.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -167,6 +168,17 @@ const config = {
         removeComments: true,
       },
       filename: './mm-registration.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: 'about.html',
+      favicon: './public/icon.ico',
+      chunks: ['about'],
+      minify: !IS_DEV && {
+        collapseWhitespace: false,
+        preserveLineBreaks: false,
+        removeComments: true,
+      },
+      filename: './about.html',
     }),
     new ExtractTextPlugin('styles.css'),
   ],
