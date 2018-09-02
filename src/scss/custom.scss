@@ -87,6 +87,16 @@ nav,
   @include media-breakpoint-up(md) {
     position: relative;
   }
+  img{
+    @include media-breakpoint-up(xs) {
+      width: 61px;
+      height: auto;
+    }
+    @include media-breakpoint-up(md) {
+      width: auto;
+      height: auto;
+    }
+  }
 }
 
 .navbar-collapse {
@@ -214,12 +224,16 @@ header {
       width: 297px;
       height: 702px;
       left: 0;
-      top: 270px;
+      top: 110px;
       background-image: url('../../public/img/header-left-elements.png');
       background-repeat: no-repeat;
       background-size: 100%;
       background-position: center;
       z-index: 1;
+
+      @include media-breakpoint-up(lg) {
+        top: 120px;
+      }
     }
 
     &.elements-right {
@@ -242,30 +256,79 @@ header {
 
   .container {
     .row {
+      position: relative;
+
+      .toregistration {
+        z-index: 10;
+        position: absolute;
+        width: 100%;
+        top: 452px;
+        cursor:pointer;
+        @include media-breakpoint-up(lg) {
+          margin: 0 auto;
+          top: 462px;
+        }
+        a {
+
+          display: block;
+          width: 100%;
+          max-width: 596px;
+          height: 90px;
+          background-color: #017ad7;
+          color: #ffffff;
+          
+          font-weight: bold;
+          text-transform: uppercase;
+          border: none;
+          border-radius: 0;
+          line-height: 90px;
+          @include media-breakpoint-up(xs) {
+            font-size: 18px;
+          }
+
+          @include media-breakpoint-up(sm) {
+            font-size: 27px;
+          }
+
+          @include media-breakpoint-up(md) {
+            margin-left: 200px;
+          }
+          @include media-breakpoint-up(lg) {
+            margin: 0 auto auto 300px;
+          }
+          @include media-breakpoint-up(xl) {
+            margin: 0 auto;
+          }
+
+        }
+      }
+
       .col {
-        padding-top: 200px;
-        color: #f6df6b;
+        padding-top: 130px;
+        color: #FFF;
 
         @include media-breakpoint-up(lg) {
-          padding-top: 310px;
+          padding-top: 210px;
+        }
+        @include media-breakpoint-up(xl) {
+          padding-top: 130px;
         }
 
         h1 {
 
           /* Style for "Фестиваль" */
           @include media-breakpoint-up(xs) {
-            color: $blue;
+       
             font-size: 40px;
           }
 
           @include media-breakpoint-up(sm) {
-            color: $blue;
             font-size: 45px;
           }
 
-          @include media-breakpoint-up(md) {
-            color: #f6df6b;
-            font-size: 65px;
+          @include media-breakpoint-up(lg) {
+            color: #FFF;
+            font-size: 60px;
           }
 
           font-weight: 800;
@@ -281,13 +344,12 @@ header {
           text-transform: uppercase;
           margin-bottom: 40px;
 
-          @include media-breakpoint-up(xs) {
-            color: $blue;
+          @include media-breakpoint-up(xs) { 
             font-size: 25px;
           }
 
           @include media-breakpoint-up(md) {
-            color: #f6df6b;
+            color: #FFF;
             font-size: 30px;
           }
         }
@@ -332,6 +394,16 @@ footer {
     .navbar-brand {
       position: absolute;
       padding: 0;
+      img{
+        @include media-breakpoint-up(xs) {
+          width: 61px;
+          height: auto;
+        }
+        @include media-breakpoint-up(md) {
+          width: auto;
+          height: auto;
+        }
+      }
     }
   }
 
@@ -535,7 +607,7 @@ footer {
     border: none;
     box-shadow: unset;
     padding: 0;
-    margin: 0 0 150px;
+    margin: 0 0 50px;
 
     .bx-viewport {
       height: 750px !important;
@@ -732,7 +804,7 @@ footer {
 
   .tags {
     background-color: #f5f5f5;
-    padding: 100px 0;
+    padding: 50px 0;
 
     .nav-item {
       margin-bottom: 10px;
@@ -851,7 +923,7 @@ footer {
   }
 
   .about {
-    padding: 100px 0;
+    padding: 50px 0;
 
     h2 {
       display: inline-block;
@@ -876,7 +948,7 @@ footer {
 
   .events {
     display: block;
-    margin-bottom: 194px;
+    margin-bottom: 50px;
 
     .nav {
       .nav-link {
@@ -982,8 +1054,8 @@ footer {
     padding: 193px 0;
     background-position: center;
     background-size: cover;
-    margin-bottom: 150px;
-
+    margin-bottom: 50px;
+    
     &>div {
       background-color: #ffe062;
 
@@ -1054,7 +1126,7 @@ footer {
       padding: 0;
     }
 
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 
     h1 {
       font-size: 35px;
@@ -1605,7 +1677,7 @@ footer {
   }
 
   .about {
-    padding: 100px 0;
+    padding: 50px 0;
 
     h2 {
       display: inline-block;
@@ -1657,13 +1729,16 @@ footer {
     background-image: url('../../public/img/about_bottom_bg.png');
     background-size: cover;
     border-color: #fff !important;
-    padding-top:120px;
+    padding-top: 120px;
+
     .numbers>div {
       border-color: #fff !important;
     }
-    .numbers div div{
-      padding: 0!important;
+
+    .numbers div div {
+      padding: 0 !important;
     }
+
     h2 {
       color: #ffffff !important;
       font-family: Montserrat;
@@ -1671,7 +1746,6 @@ footer {
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.55px;
-      
     }
 
     p {
