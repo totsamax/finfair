@@ -14,6 +14,9 @@ $(document).ready(function() {
     pager: false,
     autoHover: true,
     autoControls: true,
+    preventDefaultSwipeX: true,
+    preventDefaultSwipeY: false,
+    oneToOneTouch: false,
   });
 });
 

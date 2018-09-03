@@ -31,7 +31,7 @@ window.addEventListener(
             var settings = {
               async: true,
               crossDomain: true,
-              url: 'https://finfair2018.ru/webreg.new.php',
+              url: 'https://finfair2018.ru/webreg.smi.php',
               method: 'POST',
               headers: {
                 'X-API-Key':
@@ -47,10 +47,6 @@ window.addEventListener(
                 $('#code').val('');
                 form.classList.add('was-validated');
               } else {
-                //регистрация успешна
-                //отправка цели
-                //установка сообщения о регистрации
-
                 $(regForm).html(
                   '<h3>Спасибо за регистрацию. Подтверждение участия будет направлено на указанный вами адрес электронной почты</h3>'
                 );
