@@ -100,9 +100,26 @@ $('#Contacts_Close').click(function() {
     event_label: 'Contacts_Close',
   });
 });
+$('#Button_FreeTicket').click(function() {
+  gtag('event', 'Click', {
+    event_category: 'Page',
+    event_label: 'Button_FreeTicket',
+  });
+  yaCounter49889536.reachGoal('PageClickButton_FreeTicket');
+});
+$('#MenuRegHeader').click(function() {
+  gtag('event', 'Click', {
+    event_category: 'Menu',
+    event_label: 'MenuRegHeader',
+  });
+  yaCounter49889536.reachGoal('MenuClickRegistration');
+});
 
 //GA-Форма
 //1. Клик по полю – Фамилия
+$('#SMI').click(function() {
+  gtag('event', 'Click', {'event_category': 'Form', 'event_label': 'SMI'});
+});
 $('#lastName').click(function() {
   gtag('event', 'Click', {
     event_category: 'Form',
@@ -307,6 +324,7 @@ $('#btnSubmit').click(function() {
     event_category: 'Form',
     event_label: 'Registration',
   });
+  yaCounter49889536.reachGoal('FormClickRegistration');
 });
 //20. Клик по чек-боксу "Я принимаю..."
 $('#agreement').click(function() {
@@ -321,6 +339,7 @@ $('#agreement').on('invalid', function() {
     event_label: 'Rules',
   });
 });
+
 //GA - ОШИБКИ ФОРМЫ
 
 $('#tel').mask('+7(999) 999 99 99', {
@@ -386,6 +405,7 @@ window.addEventListener(
                   event_category: 'Form',
                   event_label: 'Successful',
                 });
+                yaCounter49889536.reachGoal('FormRegistrationSuccessful');
                 //установка сообщения о регистрации
                 if (
                   data.inputAge == '60 и старше' ||
