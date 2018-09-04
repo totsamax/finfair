@@ -6,7 +6,9 @@ $red: #df5a5a;
 $blue:#0179d6;
 $green:#00e1b7;
 $yellow: #f6df6b;
-
+.form-check{
+  padding-bottom: 1rem;
+}
 .mb-20 {
   margin-bottom: 20px;
 }
@@ -1088,7 +1090,18 @@ footer {
     background-position: center;
     background-size: cover;
     margin-bottom: 50px;
-
+    .mm-registration-link{
+      position: absolute;
+      top:20px;
+      right: 20px;
+      a{
+        font-size: 20px;
+        text-decoration: underline;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
     &>div {
       background-color: #ffe062;
 
@@ -1101,7 +1114,7 @@ footer {
             max-width: 665px;
             margin: 0 auto;
             text-align: center;
-            padding: 57px 0;
+            padding: 70px 0 50px;
           }
 
           form {

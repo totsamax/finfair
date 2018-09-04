@@ -20,6 +20,22 @@ $(document).ready(function() {
   });
 });
 
+$(function() {
+  var checkbox = $('#family');
+  var hidden = $('#hidden');
+
+  hidden.hide();
+  checkbox.change(function() {
+    if (checkbox.is(':checked')) {
+      hidden.slideToggle('slow');
+      $('#spouse').attr('required', true);
+    } else {
+      hidden.slideToggle('slow');
+      $('#spouse').attr('required', false);
+    }
+  });
+});
+
 //GA - Страница
 //1. Логотип FINFAIR вверху
 $('#LogoHeader').click(function() {
