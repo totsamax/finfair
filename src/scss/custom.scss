@@ -236,7 +236,37 @@ header {
         padding-right: 18px;
         margin-right: 18px;
         margin-bottom: 13px;
-
+        @include media-breakpoint-up(md) {
+          vertical-align: middle;
+          color: #ffffff;
+          font-family: Montserrat;
+          font-size: 14px;
+          font-weight: normal;
+          letter-spacing: 0.4px;
+          padding: 0;
+          position: relative;
+          border-right: 2px solid;
+          line-height: 1;
+          padding-right: 10px;
+          margin-right: 10px;
+          margin-bottom: 10px;
+        }
+        @include media-breakpoint-up(lg) { 
+          vertical-align: middle;
+          color: #ffffff;
+          font-family: Montserrat;
+          font-size: 16px;
+          font-weight: normal;
+          letter-spacing: 0.4px;
+          padding: 0;
+          position: relative;
+          border-right: 2px solid;
+          line-height: 1;
+          padding-right: 18px;
+          margin-right: 18px;
+          margin-bottom: 13px;
+        }
+        
         &.disabled {
           cursor: default;
           opacity: 0.3;
