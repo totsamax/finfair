@@ -383,7 +383,7 @@ window.addEventListener(
             var settings = {
               async: true,
               crossDomain: true,
-              url: 'https://finfair2018.ru/webreg.new.php',
+              url: 'https://promo.finfair2018.ru/webreg.promo.php',
               method: 'POST',
               headers: {
                 'X-API-Key':
