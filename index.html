@@ -3,18 +3,43 @@
 
 <head>
   <!-- Google Analytics Content Experiment code -->
-  <script>function utmx_section(){}function utmx(){}(function(){var
-      k='179577142-1',d=document,l=d.location,c=d.cookie;
-      if(l.search.indexOf('utm_expid='+k)>0)return;
-      function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-      indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-      length:j))}}}var x=f('_utmx'),xx=f('_utmxx'),h=l.hash;d.write(
-      '<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-      '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-      '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-      valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-      '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-      </script><script>utmx('url','A/B');</script>
+  <script>
+    function utmx_section() {}
+
+    function utmx() {}(function () {
+      var
+        k = '179577142-1',
+        d = document,
+        l = d.location,
+        c = d.cookie;
+      if (l.search.indexOf('utm_expid=' + k) > 0) return;
+
+      function f(n) {
+        if (c) {
+          var i = c.indexOf(n + '=');
+          if (i > -1) {
+            var j = c.
+            indexOf(';', i);
+            return escape(c.substring(i + n.length + 1, j < 0 ? c.length : j))
+          }
+        }
+      }
+      var x = f('_utmx'),
+        xx = f('_utmxx'),
+        h = l.hash;
+      d.write(
+        '<sc' + 'ript src="' + 'http' + (l.protocol == 'https:' ? 's://ssl' :
+          '://www') + '.google-analytics.com/ga_exp.js?' + 'utmxkey=' + k +
+        '&utmx=' + (x ? x : '') + '&utmxx=' + (xx ? xx : '') + '&utmxtime=' + new Date().valueOf() + (h ?
+          '&utmxhash=' + escape(h.substr(1)) : '') +
+        '" type="text/javascript" charset="utf-8"><\/sc' + 'ript>')
+    })();
+
+  </script>
+  <script>
+    utmx('url', 'A/B');
+
+  </script>
   <!-- End of Google Analytics Content Experiment code -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes, user-scalable=no">
@@ -191,10 +216,14 @@
         <div class="row">
           <div class="col">
             <h1>Ярмарка Финансовых решений</h1>
-            <h2>21 — 23 сентября 2018</h2>
+            <h2>21 &ndash; 23 сентября 2018
+              <br>Музей Москвы</h2>
           </div>
           <div class="toregistration text-center">
             <a id="Button_FreeTicket">Получить бесплатный билет</a>
+            <div id="Button_FreeTicket_logo" class="d-md-none">
+              <img src="/public/img/moex-logo.png" alt="">
+            </div>
           </div>
         </div>
 
@@ -203,7 +232,18 @@
   </header>
 
   <main role="main">
-
+    <div class="container">
+      <div class="row about">
+        <div class="col">
+          <h2>О проекте</h2>
+          <p class="lead">
+            FINFAIR – главное городское мероприятие о личных финансах! Как грамотно распоряжаться своими средствами, куда лучше вложить
+            деньги, как накопить на образование ребенку, а себе обеспечить достойную старость – на эти и многие другие вопросы
+            ответят лучшие российские эксперты на Ярмарке Финансовых решений 21-23 сентября в Музее Москвы.
+          </p>
+        </div>
+      </div>
+    </div>
     <div class="container ">
 
       <!-- Three columns of text below the carousel -->
@@ -237,109 +277,109 @@
       <div class="row events">
         <div class="col">
           <h2>Спикеры</h2>
-          <ul class="slider">
-            <li class="col-4">
-              <div class="preevent">
-                <h3>Анна
-                  <br>Попова
-                </h3>
-                <p>Вкладывай в интеллект: приумножай капитал</p>
-                <p class="preevent_date">Кандидат социологических наук, зам. Декана факультета политологии МГУ</p>
-                <div class="gradient"></div>
-                <img src="./public/img/anna_popova.jpg" alt="">
-              </div>
-              <div class="preevent">
-                <h3>Сергей
-                  <br>Хестанов
-                </h3>
-                <p>Все уровни пенсионного обеспечения: почему на заслуженный отдых нужно начинать копить еще в молодости / Личный
-                  финансовый план</p>
-                <p class="preevent_date">Открытие брокер</p>
-                <div class="gradient"></div>
-                <img src="./public/img/hestanov_sergey.jpg" alt="">
-              </div>
-            </li>
-            <li class="col-4">
-              <div class="preevent">
-                <h3>Андрей
-                  <br>Шаронов
-                </h3>
-                <p>Умный нетворкинг</p>
-                <p class="preevent_date">Бизнес-школа СКОЛКОВО</p>
-                <div class="gradient"></div>
-                <img src="./public/img/sharonov.jpg" alt="">
-              </div>
-              <div class="preevent">
-                <h3>Кущенко
-                  <br>Сергей
-                </h3>
-                <p>Спорт как бизнес, бизнес как спорт</p>
-                <p class="preevent_date">Единая Лига ВТБ</p>
-                <div class="gradient"></div>
-                <img src="./public/img/kushenko.jpg" alt="">
-              </div>
-            </li>
-            <li class="col-4">
-              <div class="preevent">
-                <h3>Михаил
-                  <br>Зыгарь
-                </h3>
-                <p> </p>
-                <p class="preevent_date">Публицист</p>
-                <div class="gradient"></div>
-                <img src="./public/img/zygar.jpg" alt="">
-              </div>
-              <div class="preevent">
-                <h3>Ингеборга
-                  <br>Дапкунайте
-                </h3>
-                <p> </p>
-                <p class="preevent_date">Актриса</p>
-                <div class="gradient"></div>
-                <img src="./public/img/dapkunayte.jpg" alt="">
-              </div>
-            </li>
-            <li class="col-4">
-              <div class="preevent">
-                <h3>Чулпан
-                  <br>Хаматова
-                </h3>
-                <p> </p>
-                <p class="preevent_date">Актриса</p>
-                <div class="gradient"></div>
-                <img src="./public/img/khamatova.jpg" alt="">
-              </div>
-              <div class="preevent">
-                <h3>Екатерина
-                  <br>Великина
-                </h3>
-                <p> </p>
-                <p class="preevent_date">Главный редактор cosmo.ru</p>
-                <div class="gradient"></div>
-                <img src="./public/img/kosmo.jpg" alt="">
-              </div>
-            </li>
-            <li class="col-4">
-              <div class="preevent">
-                <h3>Ксения
-                  <br>Чилингарова
-                </h3>
-                <p>История становления бренда. Подготовка к развитию</p>
-                <p class="preevent_date">Arctic Explorer</p>
-                <div class="gradient"></div>
-                <img src="./public/img/ksenia_chilingarova.jpg" alt="">
-              </div>
-              <div class="preevent">
-                <h3>Дмитрий
-                  <br>Панченко
-                </h3>
-                <p>Цифровизация и диджитализация экономики. Новые технологии в инвестировании</p>
-                <p class="preevent_date">БКС</p>
-                <div class="gradient"></div>
-                <img src="./public/img/panchenko.jpg" alt="">
-              </div>
-            </li>
-          </ul>
+          <div class="speakers d-flex flex-wrap justify-content-around" >
+
+            <div class="preevent">
+              <h3>Анна
+                <br>Попова
+              </h3>
+              <p>Вкладывай в интеллект: приумножай капитал</p>
+              <p class="preevent_date">Кандидат социологических наук, зам. Декана факультета политологии МГУ</p>
+              <div class="gradient"></div>
+              <img src="./public/img/anna_popova.jpg" alt="">
+            </div>
+            <div class="preevent">
+              <h3>Сергей
+                <br>Хестанов
+              </h3>
+              <p>Все уровни пенсионного обеспечения: почему на заслуженный отдых нужно начинать копить еще в молодости / Личный
+                финансовый план</p>
+              <p class="preevent_date">Открытие брокер</p>
+              <div class="gradient"></div>
+              <img src="./public/img/hestanov_sergey.jpg" alt="">
+            </div>
+
+
+            <div class="preevent">
+              <h3>Андрей
+                <br>Шаронов
+              </h3>
+              <p>Умный нетворкинг</p>
+              <p class="preevent_date">Бизнес-школа СКОЛКОВО</p>
+              <div class="gradient"></div>
+              <img src="./public/img/sharonov.jpg" alt="">
+            </div>
+            <div class="preevent">
+              <h3>Кущенко
+                <br>Сергей
+              </h3>
+              <p>Спорт как бизнес, бизнес как спорт</p>
+              <p class="preevent_date">Единая Лига ВТБ</p>
+              <div class="gradient"></div>
+              <img src="./public/img/kushenko.jpg" alt="">
+            </div>
+
+
+            <div class="preevent">
+              <h3>Михаил
+                <br>Зыгарь
+              </h3>
+              <p> </p>
+              <p class="preevent_date">Публицист</p>
+              <div class="gradient"></div>
+              <img src="./public/img/zygar.jpg" alt="">
+            </div>
+            <div class="preevent">
+              <h3>Ингеборга
+                <br>Дапкунайте
+              </h3>
+              <p> </p>
+              <p class="preevent_date">Актриса</p>
+              <div class="gradient"></div>
+              <img src="./public/img/dapkunayte.jpg" alt="">
+            </div>
+
+
+            <div class="preevent">
+              <h3>Чулпан
+                <br>Хаматова
+              </h3>
+              <p> </p>
+              <p class="preevent_date">Актриса</p>
+              <div class="gradient"></div>
+              <img src="./public/img/khamatova.jpg" alt="">
+            </div>
+            <div class="preevent">
+              <h3>Екатерина
+                <br>Великина
+              </h3>
+              <p> </p>
+              <p class="preevent_date">Главный редактор cosmo.ru</p>
+              <div class="gradient"></div>
+              <img src="./public/img/kosmo.jpg" alt="">
+            </div>
+
+
+            <div class="preevent">
+              <h3>Ксения
+                <br>Чилингарова
+              </h3>
+              <p>История становления бренда. Подготовка к развитию</p>
+              <p class="preevent_date">Arctic Explorer</p>
+              <div class="gradient"></div>
+              <img src="./public/img/ksenia_chilingarova.jpg" alt="">
+            </div>
+            <div class="preevent">
+              <h3>Дмитрий
+                <br>Панченко
+              </h3>
+              <p>Цифровизация и диджитализация экономики. Новые технологии в инвестировании</p>
+              <p class="preevent_date">БКС</p>
+              <div class="gradient"></div>
+              <img src="./public/img/panchenko.jpg" alt="">
+            </div>
+
+          </div>
         </div>
       </div>
 
@@ -469,20 +509,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
 
-      <div class="row about">
-        <div class="col">
-          <h2>О проекте</h2>
-          <p class="lead">
-            FINFAIR – главное городское мероприятие о личных финансах! Как грамотно распоряжаться своими средствами, куда лучше вложить
-            деньги, как накопить на образование ребенку, а себе обеспечить достойную старость – на эти и многие другие вопросы
-            ответят лучшие российские эксперты на Ярмарке Финансовых решений 21-23 сентября в Музее Москвы.
-          </p>
-        </div>
-
-      </div>
-    </div>
     <div class="container-fluid registration">
       <div class="container">
         <div class="row ">
