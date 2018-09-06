@@ -3,22 +3,22 @@ import './scss/custom.scss';
 import 'jquery-mask-plugin';
 import '../node_modules/bxslider/dist/jquery.bxslider';
 
-$(document).ready(function() {
-  $('.slider').bxSlider({
-    auto: true,
-    minSlides: 1,
-    maxSlides: 3,
-    slideWidth: 330,
-    slideMargin: 20,
-    adaptiveHeight: true,
-    pager: false,
-    autoHover: true,
-    autoControls: true,
-    preventDefaultSwipeX: true,
-    preventDefaultSwipeY: false,
-    oneToOneTouch: false,
-  });
-});
+// $(document).ready(function() {
+//   $('.slider').bxSlider({
+//     auto: true,
+//     minSlides: 1,
+//     maxSlides: 3,
+//     slideWidth: 330,
+//     slideMargin: 20,
+//     adaptiveHeight: true,
+//     pager: false,
+//     autoHover: true,
+//     autoControls: true,
+//     preventDefaultSwipeX: true,
+//     preventDefaultSwipeY: false,
+//     oneToOneTouch: false,
+//   });
+// });
 
 $(function() {
   var checkbox = $('#family');
